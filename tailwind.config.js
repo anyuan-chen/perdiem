@@ -17,7 +17,7 @@ module.exports = {
         textGray: "#474747",
         borderGray: "#AFAFAF",
         dividerGray: "#CECECE",
-        borderBlue: "#3B5EFF"
+        borderBlue: "#3B5EFF",
       },
       width: {
         "10vw": "10vw",
@@ -32,5 +32,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    // ...
+  ],
 };

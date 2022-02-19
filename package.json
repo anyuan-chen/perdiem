@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.4.0",
     "chart.js": "^3.7.1",
     "framer-motion": "^6.2.6",
     "next": "12.1.0",

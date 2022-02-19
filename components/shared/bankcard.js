@@ -1,14 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-export default function BankCard({ pairList }) {
+export default function BankCard({ pairList, type }) {
   /* {title: string, value: float | string}[] */
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
   });
 
-  const bankImgSource = pairList.length >= 3 ? "bankcard-big" : "bankcard";
+  var bankImgSource = pairList.length >= 3 ? "bankcard-big" : "bankcard";
+  if (type === "goal"){
+    bankImgSource = "goalcard";
+  }
   const headerSpacing = pairList.length >= 3 ? "2px" : "11px";
 
   // woo fragile
