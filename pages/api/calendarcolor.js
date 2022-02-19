@@ -1,10 +1,10 @@
 import spendingData from "../../data/spendingData.json";
 
 const UPPER_STDEV_BOUND_TO_COLOR = [
-  { stdev: -2, descriptor: "very little" },
-  { stdev: -1, descriptor: "little" },
-  { stdev: 1, descriptor: "medium" },
-  { stdev: 9999999999, descriptor: "large" },
+  { stdev: -2, descriptor: "very little", color: "#ffffff" },
+  { stdev: -1, descriptor: "little", color: "#ceb7ff" },
+  { stdev: 1, descriptor: "medium", color: "#e9effd" },
+  { stdev: 9999999999, descriptor: "large", color: "#3559ff" },
 ];
 
 function calculateStats(numArray) {
@@ -33,7 +33,7 @@ export default function handler(req, res) {
   for (const [index, val] of UPPER_STDEV_BOUND_TO_COLOR.entries()) {
     if (mean + stdev * val.stdev > sumPurchasesOnDate[date]) {
       return res.status(200).json({
-        descriptor: val.descriptor,
+        ...val,
         severity: index,
         spending: sumPurchasesOnDate[date],
         mean,
