@@ -5,14 +5,33 @@ const allDays = [
   ...new Set(spendingData.map((i) => i.time.substring(0, i.time.indexOf("T")))),
 ]; // remove duplicates and convert to array to use map
 
+const dayStructure = {};
+for (const d of allDays) {
+  dayStructure[d] = [];
+  dayStructure[d].push(...spendingData.filter((i) => i.time.startsWith(d)));
+}
+
 export default function Day({ day }) {
-  return <div>{day}</div>;
+  return (
+    <div>
+      <h2>Purchases</h2>
+      {day.map((d, i) => (
+        <div key={i}>
+          <p>
+            <strong>{d.store}</strong>
+            <p>${d.amount}</p>
+            <p>{new Date(d.time).toLocaleString()}</p>
+          </p>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export async function getStaticProps({ params }) {
   return {
     props: {
-      day: spendingData.filter((d) => d.time.startsWith(params.day)),
+      day: dayStructure[params.day],
     },
   };
 }
