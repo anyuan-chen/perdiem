@@ -4,16 +4,7 @@ import { motion } from "framer-motion";
 import CalendarDay from "./calendarDay";
 import { useEffect } from "react";
 
-var dateComponents = [];
-for (
-  var i = new Date(2022,0, 29);
-  i <= new Date(2022, 2, 4);
-  i.setDate(i.getDate() + 1)
-) {
-  dateComponents.push(<CalendarDay date={i.toISOString()}></CalendarDay>);
-}
-
-export default function Calendar() {
+export default function Calendar({ dayInfo }) {
   return (
     <div
       className="rounded-xl h-full"
@@ -60,7 +51,15 @@ export default function Calendar() {
           <div className="flex flex-col-reverse">
             <h2 className="text-lg font-semibold text-center">Sun</h2>
           </div>
-          {dateComponents}
+          {dayInfo.map((dayInfo, index) => {
+            return (
+              <CalendarDay
+                key={index}
+                color={dayInfo.color}
+                date={dayInfo.date}
+              ></CalendarDay>
+            );
+          })}
         </div>
       </div>
     </div>

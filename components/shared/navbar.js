@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 export default function Navbar() {
   const router = useRouter();
-  console.log(router.route);
   const textStyling = "text-navbarActiveText";
   const highlightStyling = "bg-navbarActiveHighlight";
 
