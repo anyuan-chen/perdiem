@@ -4,6 +4,27 @@ import ResultCard from "../../components/breakdown/resultcard";
 import InfoboxSmall from "../../components/breakdown/infobox-small";
 import InfoboxBig from "../../components/breakdown/infobox-big";
 import CompletionBar from "../../components/breakdown/bar";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 export default function YearBreakdown() {
   const monthlyDescription = "August was your best month, with $6,000.20 spent";
@@ -71,6 +92,56 @@ export default function YearBreakdown() {
             title="Daily"
             money={23.02}
             description={dailyDescription}
+          />
+        </div>
+        <br />
+        <br />
+        <div className="bar-container flex flex-col p-6">
+          <h1 className="title">Monthly Spending</h1>
+          <h3 className="subtitle">
+            At the end of 2021, you were $20,000.04 over-budget, or 25%
+          </h3>
+          <Line
+            datasetIdKey="id"
+            data={{
+              labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+              ],
+              datasets: [
+                {
+                  id: 1,
+                  label: "",
+                  lineTension: 0.4,
+                  borderColor: "#2E77CD",
+                  data: [5, 6, 7, 9, 10, 14, 50, 60, 70, 80, 90, 100],
+                  pointRadius: 0,
+                },
+              ],
+            }}
+            options={{
+              plugins: { legend: { display: false } },
+              scales: {
+                x: {
+                  grid: {
+                    display: false,
+                  },
+                },
+                y: {
+                  display: false,
+                },
+              },
+            }}
           />
         </div>
         <div className="bar-container flex justify-center items-center p-6"></div>
