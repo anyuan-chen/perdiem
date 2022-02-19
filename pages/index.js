@@ -61,7 +61,7 @@ export default function Home({ dayInfo }) {
   );
 }
 
-export async function getStaticProps() {
+export const getServerSideProps = async (context) => {
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
