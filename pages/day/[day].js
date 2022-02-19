@@ -73,7 +73,7 @@ export default function Day({ day }) {
             </p>
           </BankCard>
         </div>
-        <div className="bg-white border-blue-300 rounded-lg border py-4 px-4 px-10 row-span-4 flex flex-col gap-3 items-center">
+        <div className="bg-white border-blue-100 rounded-lg border py-4 px-4 px-10 row-span-4 flex flex-col gap-3 items-center">
           <h1 className="text-2xl font-bold text-gray-800 mb-2">
             Purchase History
           </h1>
