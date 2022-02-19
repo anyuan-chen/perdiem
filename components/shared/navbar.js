@@ -11,7 +11,7 @@ export default function Navbar() {
   const highlightStyling = "bg-navbarActiveHighlight";
 
   return (
-    <nav className="w-20vw h-screen flex flex-col font-display border-r border-r-borderGray">
+    <nav className="h-screen flex flex-col font-display border-r border-r-borderGray" style={{width: "25vw"}}>
       <img
         className="rounded-full mx-28 mt-16 mb-12"
         src="/photos/portrait.jpeg"
