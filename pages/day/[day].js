@@ -38,6 +38,7 @@ export default function Day({ day }) {
           <div className="grid bg-white border-orange-300 rounded-lg border p-6 px-10 grid-rows-2 grid-cols-2">
             <div className="col-span-2">
               <CompletionBar percentage={78} color="#ff9900" />
+              <span style={{ marginLeft: `77%` }}>▲</span>
             </div>
             <div className="grid items-center">
               <p className="text-orange-500 text-sm bg-orange-100 w-40 text-center p-1 py-0.5 rounded-xl">
@@ -45,8 +46,15 @@ export default function Day({ day }) {
               </p>
             </div>
             <div className="flex flex-col items-end">
-              <p>Remaining monthly budget</p>
-              <p>$238.34 of $500</p>
+              <p className="uppercase tracking-widest text-xs font-medium">
+                Remaining monthly budget
+              </p>
+              <p>
+                <span className="font-bold text-xl">$238.34 </span>
+                <span className="font-semibold text-xl text-gray-400">
+                  of $500
+                </span>
+              </p>
             </div>
           </div>
         </div>
