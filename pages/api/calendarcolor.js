@@ -6,7 +6,7 @@ const UPPER_STDEV_BOUND_TO_COLOR = [
   { stdev: -2, descriptor: "very little", color: "#ffffff" },
   { stdev: -1, descriptor: "little", color: "#ceb7ff" },
   { stdev: 1, descriptor: "medium", color: "#e9effd" },
-  { stdev: 9999999999, descriptor: "large", color: "#3559ff" },
+  { stdev: 9999999999, descriptor: "large", color: "rgba(53,89,255, 0.2)" },
 ];
 
 function calculateStats(numArray) {

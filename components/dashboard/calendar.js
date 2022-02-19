@@ -14,7 +14,7 @@ export default function Calendar({ dayInfo }) {
       }}
     >
       <div className="flex flex-col align-center h-full bg-white rounded-xl px-12">
-        <div className="flex pt-8 justify-center ">
+        <div className="flex pt-8 justify-center">
           <motion.button
             className="rounded-full w-12 h-12 flex items-center justify-center"
             style={{ backgroundColor: "#E9EFFD" }}
@@ -29,7 +29,7 @@ export default function Calendar({ dayInfo }) {
             <img src="/icons/rightArrow.svg" alt="right arrow"></img>
           </motion.button>
         </div>
-        <div className="grid grid-rows-5 grid-cols-7 gap-x-10 gap-y-5">
+        <div className="grid grid-rows-5 grid-cols-7 gap-x-10 gap-y-5 pb-16">
           <div className="flex flex-col-reverse">
             <h2 className="text-lg font-semibold text-center">Sun</h2>
           </div>

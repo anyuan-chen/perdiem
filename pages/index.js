@@ -53,7 +53,7 @@ export default function Home({ dayInfo }) {
           </div>
         </div>
         <div></div>
-        <div className="col-start-1 col-span-2 row-start-2 row-span-2 pt-8">
+        <div className="col-start-1 col-span-2 row-start-2 row-span-2 pt-8 pb-6">
           <Calendar dayInfo={dayInfo}></Calendar>
         </div>
       </div>

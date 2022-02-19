@@ -9,7 +9,7 @@ function CalendarDay({color, date}) {
         border: "1.5px solid #3B5EFF",
       }}
       style={{
-        backgroundColor: color,
+        background: color,
         border: "border #AFAFAF 1px",
         height: "78px",
       }}
