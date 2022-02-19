@@ -69,7 +69,7 @@ export default function YearBreakdown() {
           />
         </div>
         <h1 className="title mt-8">Your biggest offenders were...</h1>
-        <div className="bar-container flex flex-col p-6">
+        <div className="bar-container flex flex-col p-6 bg-white">
           <CompletionBar
             percentage={69}
             description="70% of your groceries were spent at Costco"
@@ -96,7 +96,7 @@ export default function YearBreakdown() {
         </div>
         <br />
         <br />
-        <div className="bar-container flex flex-col p-6 overlayable">
+        <div className="bar-container flex flex-col p-6 overlayable bg-white">
           <h1 className="title">Monthly Spending</h1>
           <h3 className="subtitle">
             At the end of 2021, you were $20,000.04 over-budget, or 25%
@@ -154,14 +154,14 @@ export default function YearBreakdown() {
         </div>
         <h1 className="title mt-8">Your overall rating is :pensive: 😔</h1>
         <div className="flex gap-6 p-6 w-full h-80 flex-wrap">
-          <div className="bar-container w-2/5 flex-grow flex flex-col justify-center items-center p-6">
+          <div className="bar-container w-2/5 flex-grow flex flex-col justify-center items-center p-6 bg-white">
             <p className="uppercase text-center tracking-widest text-gray-900">
               You were over budget
             </p>
             <h4 className="title">80%</h4>
             <h2 className="font-medium text-2xl text-gray-400">of the time</h2>
           </div>
-          <div className="bar-container w-2/5 flex-grow flex flex-col justify-center items-center p-6">
+          <div className="bar-container w-2/5 flex-grow flex flex-col justify-center items-center p-6 bg-white">
             <p className="uppercase text-center tracking-widest text-gray-900">
               You spent
             </p>
