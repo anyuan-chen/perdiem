@@ -5,29 +5,35 @@ import Calendar from "../components/dashboard/calendar";
 import BankCard from "../components/shared/bankcard";
 import Navbar from "../components/shared/navbar";
 
-export default function Home({ dayInfo }) {
+export default function Home({
+  dayInfo,
+  bankBalance,
+  moneySpentToday,
+  budgetLeft,
+  recommendedSpending,
+}) {
   const bigPairList = [
     {
       title: "total bank balance",
-      value: 338.34,
+      value: bankBalance,
     },
     {
       title: "money spent today",
-      value: 22003.98,
+      value: moneySpentToday,
     },
     {
-      title: "money spent today",
-      value: 22003.98,
+      title: "chequing account",
+      value: "XXXXXXXXXXXXXXXX",
     },
   ];
   const pairList = [
     {
-      title: "total bank balance",
-      value: 338.34,
+      title: "money left in budget",
+      value: budgetLeft,
     },
     {
-      title: "money spent today",
-      value: 22003.98,
+      title: "recommended spending",
+      value: recommendedSpending,
     },
   ];
   return (
@@ -67,19 +73,19 @@ export const getServerSideProps = async (context) => {
     currency: "USD",
   });
   var dayInfo = [];
+  let httpProtocol;
+  if (context.req.headers.host.includes("localhost")) {
+    httpProtocol = "http";
+  } else {
+    httpProtocol = "https";
+  }
+
   for (
     var i = new Date(2022, 0, 29);
     i <= new Date(2022, 2, 4);
     i.setDate(i.getDate() + 1)
   ) {
     const date = i.toISOString();
-
-    let httpProtocol;
-    if (context.req.headers.host.includes("localhost")) {
-      httpProtocol = "http";
-    } else {
-      httpProtocol = "https";
-    }
 
     const yyyymmdd = i.toISOString().substr(0, 10);
     const res = await fetch(
@@ -99,9 +105,30 @@ export const getServerSideProps = async (context) => {
     }
     dayInfo.push({ date, color, spending });
   }
+
+  const res = await (
+    await fetch(`${httpProtocol}://${context.req.headers.host}/api/spendrec`)
+  ).json();
+
+  const historyRes = await (
+    await fetch(
+      `${httpProtocol}://${context.req.headers.host}/api/history?date=${
+        new Date().toISOString().split("T")[0]
+      }`
+    )
+  ).json();
+
+  const recommendedSpending = res.amount;
+  const moneySpentToday =
+    historyRes.map((e) => e.amount).reduce((a, b) => a + b, 0) || 0;
+  console.log(recommendedSpending, moneySpentToday);
   return {
     props: {
       dayInfo: dayInfo,
+      bankBalance: 0,
+      moneySpentToday: moneySpentToday,
+      budgetLeft: 0,
+      recommendedSpending: recommendedSpending,
     },
   };
 };
