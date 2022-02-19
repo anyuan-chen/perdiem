@@ -96,7 +96,7 @@ export default function YearBreakdown() {
         </div>
         <br />
         <br />
-        <div className="bar-container flex flex-col p-6 overlayable bg-white">
+        <div className="bar-container flex flex-col p-6 overlayable bg-white w-full">
           <h1 className="title">Monthly Spending</h1>
           <h3 className="subtitle">
             At the end of 2021, you were $20,000.04 over-budget, or 25%
