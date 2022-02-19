@@ -3,6 +3,7 @@ import Navbar from "../../components/shared/navbar";
 import ResultCard from "../../components/breakdown/resultcard";
 import InfoboxSmall from "../../components/breakdown/infobox-small";
 import InfoboxBig from "../../components/breakdown/infobox-big";
+import CompletionBar from "../../components/breakdown/bar";
 
 export default function YearBreakdown() {
   const monthlyDescription = "August was your best month, with $6,000.20 spent";
@@ -47,6 +48,13 @@ export default function YearBreakdown() {
           />
         </div>
         <h1 className="title">Your biggest offenders were...</h1>
+        <div className="bar-container flex flex-col p-6">
+          <CompletionBar
+            percentage={69}
+            description="70% of your groceries were spent at Costco"
+            cost={342.2}
+          />
+        </div>
         <h1 className="title">On average you spent...</h1>
         <div className="flex flex-col gap-8">
           <ResultCard
@@ -83,6 +91,11 @@ export default function YearBreakdown() {
           color: #818181;
           font-weight: 500;
           font-size: 1.25rem;
+        }
+
+        .bar-container {
+          border: 1px solid #75c5ff66;
+          border-radius: 0.75rem;
         }
 
         * {
