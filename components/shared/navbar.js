@@ -37,7 +37,7 @@ export default function Navbar() {
         </motion.div>
       </button>
 
-      <hr className="mx-24"></hr>
+      <hr className="mx-24 border-dividerGray"></hr>
 
       <ul className="flex flex-col  text-textGray pr-16 pt-10 space-y-12 pb-10">
         <button className=" w-full">
@@ -103,7 +103,7 @@ export default function Navbar() {
           </motion.div>
         </button>
       </ul>
-      <hr className="mx-24"></hr>
+      <hr className="mx-24 border-dividerGray"></hr>
 
       <ul className="text-textGray pt-10 space-y-12 pb-10">
         <button className=" w-full">

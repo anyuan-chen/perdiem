@@ -16,6 +16,7 @@ module.exports = {
         navbarActiveText: "rgb(46, 119, 205)",
         textGray: "#474747",
         borderGray: "#AFAFAF",
+        dividerGray: "#CECECE"
       },
       width: {
         "10vw": "10vw",
