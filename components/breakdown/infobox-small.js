@@ -15,18 +15,22 @@ export default function InfoboxSmall({
     currency: "USD",
   });
   return (
-    <div className="container p-4 border-box">
+    <div className="container p-4 border-box gap-1 place-items-end items-center row-span-2">
       <p></p>
-      <p className="uppercase tracking-widest text-gray-900">{category}</p>
+      <p className="uppercase text-right tracking-widest text-gray-900 col-span-2">
+        {category}
+      </p>
       <p></p>
-      <p className={`text-right text-sm ${classColor}`}>
+      <p className={`text-right text-sm col-span-2 ${classColor}`}>
         {changePercentage > 0 ? "▲ " : "▼ "} &nbsp;&nbsp;
         {Math.abs(Math.round(changePercentage))}% from last year
       </p>
-      <p className="title text-right leading-10 font-bold">
+      <p className="title text-right leading-11 font-bold">
         {Math.round(percentage)}%
       </p>
-      <p className="text-right">{formatter.format(totalMoney)}</p>
+      <p className="text-right font-medium text-3xl text-gray-400">
+        {formatter.format(totalMoney)}
+      </p>
 
       <style jsx>{`
         .container {

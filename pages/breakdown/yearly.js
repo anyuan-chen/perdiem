@@ -19,7 +19,8 @@ export default function YearBreakdown() {
           You destroyed your budget of $80,000. Let&apos;s see how you managed
           to do it.
         </h3>
-        <div className="grid grid-flow-row-dense grid-cols-2 grid-rows-3">
+        <br />
+        <div className="gap-10 grid grid-flow-row-dense grid-cols-2 grid-rows-5">
           <InfoboxSmall
             percentage={16}
             changePercentage={10}
