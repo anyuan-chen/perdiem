@@ -35,7 +35,7 @@ export default function YearBreakdown() {
   return (
     <div className="flex container">
       <Navbar></Navbar>
-      <div className="flex-column p-20 w-full">
+      <div className="flex-column p-20 w-full cs-bg">
         <h1 className="title">In 2021, you spent $100,000.04</h1>
         <h3 className="subtitle">
           You destroyed your budget of $80,000. Let&apos;s see how you managed
@@ -198,6 +198,9 @@ export default function YearBreakdown() {
         </div>
       </div>
       <style jsx>{`
+        .cs-bg {
+          background: url(/photos/breakdown-bg.svg);
+        }
         .container {
           margin-left: 25vw;
           width: 75vw;
