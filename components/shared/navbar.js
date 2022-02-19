@@ -86,7 +86,7 @@ export default function Navbar() {
           </motion.div>
         </button>
 
-        <button className=" w-full">
+        <button className=" w-full ">
           <motion.div
             className={`py-4 rounded-r-full ${
               router.route === "/breakdown/weekly" ? highlightStyling : ""
@@ -110,7 +110,7 @@ export default function Navbar() {
       <hr className="mx-24 border-dividerGray"></hr>
 
       <ul className="text-textGray pt-10 space-y-4 pb-10">
-        <button className=" w-full">
+        <button className=" w-full pr-28">
           <motion.div
             className={`py-3 rounded-r-full ${
               router.route === "/goals" ? highlightStyling : ""
@@ -147,7 +147,7 @@ export default function Navbar() {
             </Link>
           </motion.div>
         </button>
-        <button className=" w-full ">
+        <button className=" w-full pr-28">
           <motion.div
             className={`py-3 rounded-r-full ${
               router.route === "/faq" ? highlightStyling : ""
