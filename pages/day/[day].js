@@ -35,8 +35,19 @@ export default function Day({ day }) {
           </motion.button>
         </header>
         <div className="col-span-2 bg-white p-4">
-          <div className="grid">
-            <CompletionBar percentage={78} color="#ff9900" />
+          <div className="grid bg-white border-orange-300 rounded-lg border p-6 px-10 grid-rows-2 grid-cols-2">
+            <div className="col-span-2">
+              <CompletionBar percentage={78} color="#ff9900" />
+            </div>
+            <div className="grid items-center">
+              <p className="text-orange-500 text-sm bg-orange-100 w-40 text-center p-1 py-0.5 rounded-xl">
+                You are on track! 😄
+              </p>
+            </div>
+            <div className="flex flex-col items-end">
+              <p>Remaining monthly budget</p>
+              <p>$238.34 of $500</p>
+            </div>
           </div>
         </div>
         <div className="row-span-2">another bank card</div>
@@ -47,6 +58,9 @@ export default function Day({ day }) {
           .container {
             margin-left: 25vw;
             width: 75vw;
+          }
+          * {
+            font-family: "Manrope", sans-serif;
           }
         `}</style>
       </div>
