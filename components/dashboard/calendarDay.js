@@ -15,7 +15,7 @@ export default function CalendarDay(props) {
         height: "78px",
       }}
     >
-      <p className="pt-3 pl-3">{props.date}</p>
+      <p className="pt-3 pl-3">{props.date.substr(8,2)}</p>
     </motion.div>
   );
 }

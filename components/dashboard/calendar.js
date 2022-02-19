@@ -6,11 +6,11 @@ import { useEffect } from "react";
 
 var dateComponents = [];
 for (
-  var i = new Date(2022, 1, 28);
-  i < new Date(2022, 3, 4);
+  var i = new Date(2022,0, 29);
+  i <= new Date(2022, 2, 4);
   i.setDate(i.getDate() + 1)
 ) {
-  dateComponents.push(<CalendarDay date={i}></CalendarDay>);
+  dateComponents.push(<CalendarDay date={i.toISOString()}></CalendarDay>);
 }
 
 export default function Calendar() {
@@ -23,7 +23,7 @@ export default function Calendar() {
       }}
     >
       <div className="flex flex-col align-center h-full bg-white rounded-xl px-12">
-        <div className="flex pt-8 justify-center">
+        <div className="flex pt-8 justify-center ">
           <motion.button
             className="rounded-full w-12 h-12 flex items-center justify-center"
             style={{ backgroundColor: "#E9EFFD" }}
@@ -60,13 +60,7 @@ export default function Calendar() {
           <div className="flex flex-col-reverse">
             <h2 className="text-lg font-semibold text-center">Sun</h2>
           </div>
-          <CalendarDay backgroundColor="#E9EFFD" date="30"></CalendarDay>
-          <CalendarDay backgroundColor="#E9EFFD" date="30"></CalendarDay>
-          <CalendarDay backgroundColor="#E9EFFD" date="30"></CalendarDay>
-          <CalendarDay backgroundColor="#E9EFFD" date="30"></CalendarDay>
-          <CalendarDay backgroundColor="#E9EFFD" date="30"></CalendarDay>
-          <CalendarDay backgroundColor="#E9EFFD" date="30"></CalendarDay>
-          <CalendarDay backgroundColor="#E9EFFD" date="30"></CalendarDay>
+          {dateComponents}
         </div>
       </div>
     </div>
