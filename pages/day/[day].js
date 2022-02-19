@@ -1,22 +1,25 @@
 import React from "react";
+import spendingData from "../../data/spendingData.json";
+
+const allDays = [
+  ...new Set(spendingData.map((i) => i.time.substring(0, i.time.indexOf("T")))),
+]; // remove duplicates and convert to array to use map
 
 export default function Day({ day }) {
   return <div>{day}</div>;
 }
+
 export async function getStaticProps({ params }) {
   return {
     props: {
-      day: params.day,
+      day: spendingData.filter((d) => d.time.startsWith(params.day)),
     },
   };
 }
+
 export async function getStaticPaths() {
-  var days = [];
-  for (let i = 0; i < 29; i++) {
-    days.push(i.toString());
-  }
   return {
-    paths: days.map((day) => {
+    paths: allDays.map((day) => {
       return {
         params: {
           day,

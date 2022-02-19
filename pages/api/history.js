@@ -1,5 +1,4 @@
 import spendingData from "../../data/spendingData.json";
-// we couldn't possibly need this anywhere else could we
 
 export default function handler(req, res) {
   // slow but less dev time
