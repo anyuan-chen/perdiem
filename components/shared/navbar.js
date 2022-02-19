@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav
       className="h-screen flex flex-col font-display border-r fixed border-r-borderGray"
-      style={{ width: "25vw", left: 0}}
+      style={{ width: "25vw", left: 0 }}
     >
       <img
         className="rounded-full mx-28 mt-16 mb-12"
@@ -22,29 +22,31 @@ export default function Navbar() {
 
       <button className=" w-full pr-28 pb-10">
         <motion.div
-          className={`rounded-r-full py-3 ${
-            router.route === "/dashboard" ? highlightStyling : ""
+          className={`py-3 rounded-r-full  ${
+            router.route === "/" ? highlightStyling : ""
           }`}
           whileHover={{
             color: "rgb(46, 119, 205)",
           }}
         >
-          <h3
-            className={`text-left pl-24  font-semibold text-xl ${
-              router.route === "/dashboard" ? textStyling : ""
-            }`}
-          >
-            Dashboard
-          </h3>
+          <Link href="/" passHref>
+            <h3
+              className={`text-left pl-24  font-semibold text-xl  ${
+                router.route === "/" ? textStyling : ""
+              }`}
+            >
+              <a>Dashboard</a>
+            </h3>
+          </Link>
         </motion.div>
       </button>
 
       <hr className="mx-24 border-dividerGray"></hr>
 
-      <ul className="flex flex-col  text-textGray pr-16 pt-10 space-y-12 pb-10">
+      <ul className="flex flex-col  text-textGray pr-16 pt-10 space-y-8 pb-10">
         <button className=" w-full">
           <motion.div
-            className={`rounded-r-full ${
+            className={`py-4 rounded-r-full ${
               router.route === "/breakdown/yearly" ? highlightStyling : ""
             }`}
             whileHover={{
@@ -65,8 +67,8 @@ export default function Navbar() {
 
         <button className=" w-full">
           <motion.div
-            className={`rounded-r-full ${
-              router.route === "/breakdown/yearly" ? highlightStyling : ""
+            className={`py-1 rounded-r-full ${
+              router.route === "/breakdown/" ? highlightStyling : ""
             }`}
             whileHover={{
               color: "rgb(46, 119, 205)",
@@ -86,7 +88,7 @@ export default function Navbar() {
 
         <button className=" w-full">
           <motion.div
-            className={`rounded-r-full ${
+            className={`py-1 rounded-r-full ${
               router.route === "/breakdown/weekly" ? highlightStyling : ""
             }`}
             whileHover={{
@@ -107,10 +109,10 @@ export default function Navbar() {
       </ul>
       <hr className="mx-24 border-dividerGray"></hr>
 
-      <ul className="text-textGray pt-10 space-y-12 pb-10">
+      <ul className="text-textGray pt-10 space-y-8 pb-10">
         <button className=" w-full">
           <motion.div
-            className={`rounded-r-full ${
+            className={`py-4 rounded-r-full ${
               router.route === "/goals" ? highlightStyling : ""
             }`}
             whileHover={{
@@ -130,7 +132,7 @@ export default function Navbar() {
         </button>
         <button className=" w-full">
           <motion.div
-            className={`rounded-r-full ${
+            className={`py-4 rounded-r-full ${
               router.route === "/settings" ? highlightStyling : ""
             }`}
           >
@@ -147,7 +149,7 @@ export default function Navbar() {
         </button>
         <button className=" w-full ">
           <motion.div
-            className={`rounded-r-full ${
+            className={`py-4 rounded-r-full ${
               router.route === "/faq" ? highlightStyling : ""
             }`}
             whileHover={{

@@ -62,6 +62,10 @@ export default function Home({ dayInfo }) {
 }
 
 export async function getStaticProps() {
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
   var dayInfo = [];
   for (
     var i = new Date(2022, 0, 29);
@@ -75,14 +79,19 @@ export async function getStaticProps() {
         `http://localhost:3000/api/calendarcolor?date=${yyyymmdd}`
       );
       const req = await res.json();
+      console.log(req)
       var color = req.color;
+      var spending = req.spending;
       if (!color){
          color = "#E5E5E5";
       }
-      dayInfo.push({ date, color });
-    
-  
-  
+      if (!spending){
+        spending = "---"
+      }
+      else{
+        spending = formatter.format(spending);
+      }
+      dayInfo.push({ date, color , spending});
   }
   return {
     props: {

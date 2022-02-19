@@ -10,7 +10,7 @@ export default function Calendar({ dayInfo }) {
       className="rounded-xl h-full"
       style={{
         background: "linear-gradient(to right, #75C5FF, #1C69FF)",
-        padding: "1px",
+        padding: "2px",
       }}
     >
       <div className="flex flex-col align-center h-full bg-white rounded-xl px-12">
@@ -57,6 +57,7 @@ export default function Calendar({ dayInfo }) {
                 key={index}
                 color={dayInfo.color}
                 date={dayInfo.date}
+                spending={dayInfo.spending}
               ></CalendarDay>
             );
           })}
