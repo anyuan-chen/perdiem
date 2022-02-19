@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import spendingData from "../../data/spendingData.json";
 import Navbar from "../../components/shared/navbar";
+import CompletionBar from "../../components/breakdown/bar";
 
 const allDays = [
   ...new Set(spendingData.map((i) => i.time.substring(0, i.time.indexOf("T")))),
@@ -17,7 +18,7 @@ export default function Day({ day }) {
   return (
     <div>
       <Navbar />
-      <div className="container grid grid-cols-2 grid-rows-5 w-full p-8">
+      <div className="container grid grid-cols-2 grid-rows-6 w-full p-8">
         <header className="flex items-center justify-center col-span-2">
           <motion.button
             className="rounded-full w-12 h-12 flex items-center justify-center"
@@ -33,6 +34,14 @@ export default function Day({ day }) {
             <img src="/icons/rightArrow.svg" alt="right arrow"></img>
           </motion.button>
         </header>
+        <div className="col-span-2 bg-white p-4">
+          <div className="grid">
+            <CompletionBar percentage={78} />
+          </div>
+        </div>
+        <div className="row-span-2">another bank card</div>
+        <div className="row-span-4">purchase history</div>
+        <div className="row-span-2">goal save</div>
 
         <style jsx>{`
           .container {
