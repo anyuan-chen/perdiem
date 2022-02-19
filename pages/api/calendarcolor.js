@@ -1,6 +1,8 @@
 import spendingData from "../../data/spendingData.json";
 
 const UPPER_STDEV_BOUND_TO_COLOR = [
+  // e.g., if spending is less than 1 stdev below the mean
+  // but more than 2 stdevs it will return "little"
   { stdev: -2, descriptor: "very little", color: "#ffffff" },
   { stdev: -1, descriptor: "little", color: "#ceb7ff" },
   { stdev: 1, descriptor: "medium", color: "#e9effd" },
