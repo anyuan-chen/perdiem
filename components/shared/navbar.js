@@ -10,7 +10,7 @@ export default function Navbar() {
   const highlightStyling = "bg-navbarActiveHighlight";
 
   return (
-    <nav className="w-20vw h-screen flex flex-col font-display">
+    <nav className="w-20vw h-screen flex flex-col font-display border-r border-r-borderGray">
       <img
         className="rounded-full mx-16 my-16"
         src="/photos/portrait.jpeg"
@@ -35,7 +35,7 @@ export default function Navbar() {
 
       <hr className="mx-16"></hr>
 
-      <ul className="flex flex-col space-y-8 text-textGray pr-16">
+      <ul className="flex flex-col  text-textGray pr-16">
         <button className=" w-full">
           <div
             className={`rounded-r-full ${
@@ -92,7 +92,7 @@ export default function Navbar() {
       </ul>
       <hr className="mx-16"></hr>
 
-      <ul className="text-textGray space-y-8">
+      <ul className="text-textGray ">
         <button className=" w-full">
           <div
             className={`rounded-r-full ${
