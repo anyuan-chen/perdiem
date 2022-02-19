@@ -74,24 +74,43 @@ export async function getStaticProps() {
   ) {
     const date = i.toISOString();
 
+    let data;
+    let httpProtocol;
+
+    if (context.req.headers.host.includes("localhost")) {
+      httpProtocol = "http";
+    } else {
+      httpProtocol = "https";
+    }
+
+    try {
       const yyyymmdd = i.toISOString().substr(0, 10);
       const res = await fetch(
-        `http://localhost:3000/api/calendarcolor?date=${yyyymmdd}`
+        `${httpProtocol}://${context.req.headers.host}/api/calendarcolor?date=${yyyymmdd}`,
+        {
+          method: "POST",
+          body: JSON.stringify({ type: "FETCH_PRODUCTS" }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
-      const req = await res.json();
-      console.log(req)
-      var color = req.color;
-      var spending = req.spending;
-      if (!color){
-         color = "#E5E5E5";
-      }
-      if (!spending){
-        spending = "---"
-      }
-      else{
-        spending = formatter.format(spending);
-      }
-      dayInfo.push({ date, color , spending});
+      req = await res.json();
+    } catch (error) {
+      data = error;
+    }
+
+    var color = req.color;
+    var spending = req.spending;
+    if (!color) {
+      color = "#E5E5E5";
+    }
+    if (!spending) {
+      spending = "---";
+    } else {
+      spending = formatter.format(spending);
+    }
+    dayInfo.push({ date, color, spending });
   }
   return {
     props: {
