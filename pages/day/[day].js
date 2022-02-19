@@ -88,7 +88,21 @@ export default function Day({ day }) {
             <p className="text-sm">$60</p>
           </div>
         </div>
-        <div className="row-span-2">goal save</div>
+        <div className="row-span-2 flex flex-col justify-evenly border rounded-lg p-2 px-10 border-blue-100">
+          <h1 className="text-2xl font-bold text-gray-800 mb-2">
+            Save for a car
+          </h1>
+          <div>
+            <CompletionBar percentage={60} color="#489c6a" />
+            <div className="flex justify-between w-full my-3">
+              <p className="font-bold text-lg">$10,339.04</p>
+              <p className="font-bold text-lg text-gray-400">of $13,984.23</p>
+            </div>
+          </div>
+          <p>
+            {5 < 0 ? "▲ " : "▼ "}&nbsp;&nbsp; You added $15 to your goal today
+          </p>
+        </div>
 
         <style jsx>{`
           .container {
