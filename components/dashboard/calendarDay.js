@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 function CalendarDay({color, date}) {
   return (
-    <motion.div
+    <motion.a
+      href={`/day/${date.substring(0, date.indexOf("T"))}`}
       className="rounded-md"
       whileHover={{
         border: "1.5px solid #3B5EFF",
@@ -15,7 +16,7 @@ function CalendarDay({color, date}) {
       }}
     >
       <p className="pt-3 pl-3">{date.substr(8, 2)}</p>
-    </motion.div>
+    </motion.a>
   );
 }
 
