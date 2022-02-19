@@ -7,7 +7,10 @@ export default function Home() {
   return (
     <div className="flex ">
       <Navbar></Navbar>
-      <Calendar></Calendar>
+      <div className="w-80vw h-screen">
+        
+        <Calendar></Calendar>
+      </div>
     </div>
   );
 }
