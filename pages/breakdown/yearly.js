@@ -73,6 +73,7 @@ export default function YearBreakdown() {
             description={dailyDescription}
           />
         </div>
+        <div className="bar-container flex justify-center items-center p-6"></div>
       </div>
       <style jsx>{`
         .container {
