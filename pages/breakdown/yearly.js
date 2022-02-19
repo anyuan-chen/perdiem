@@ -155,14 +155,14 @@ export default function YearBreakdown() {
         <h1 className="title mt-8">Your overall rating is :pensive: 😔</h1>
         <div className="flex gap-6 p-6 w-full h-80 flex-wrap">
           <div className="bar-container w-2/5 flex-grow flex flex-col justify-center items-center p-6">
-            <p className="uppercase text-center tracking-widest text-gray-900 col-span-2">
+            <p className="uppercase text-center tracking-widest text-gray-900">
               You were over budget
             </p>
             <h4 className="title">80%</h4>
             <h2 className="font-medium text-2xl text-gray-400">of the time</h2>
           </div>
           <div className="bar-container w-2/5 flex-grow flex flex-col justify-center items-center p-6">
-            <p className="uppercase text-center tracking-widest text-gray-900 col-span-2">
+            <p className="uppercase text-center tracking-widest text-gray-900">
               You spent
             </p>
             <h4 className="title">10%</h4>
@@ -170,6 +170,31 @@ export default function YearBreakdown() {
               less than last year
             </h2>
           </div>
+        </div>
+        <p className="font-medium text-lg text-gray-700">
+          Andrew, you improved! But… you went 25% over your budget. Sometimes we
+          worry about you. Remember to drink water and take care of your
+          financials.
+        </p>
+        <div className="flex flex-wrap gap-4 justify-between mt-8">
+          <button
+            type="button"
+            className="uppercase text-center font-semibold tracking-widest text-white rounded-md bg-sky-600 p-4 py-2"
+          >
+            Revise your budget
+          </button>
+          <button
+            type="button"
+            className="uppercase text-center font-semibold tracking-widest text-white rounded-md bg-sky-600 p-4 py-2"
+          >
+            See monthly breakdown
+          </button>
+          <button
+            type="button"
+            className="uppercase text-center font-semibold tracking-widest text-white rounded-md bg-sky-600 p-4 py-2"
+          >
+            Export daily spending
+          </button>
         </div>
       </div>
       <style jsx>{`
