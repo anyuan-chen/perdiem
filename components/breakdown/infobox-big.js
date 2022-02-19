@@ -15,7 +15,7 @@ export default function Big({
     currency: "USD",
   });
   return (
-    <div className="container p-4 flex flex-col justify-between items-center row-span-3">
+    <div className="container p-4 flex flex-col justify-between items-center row-span-3 bg-white">
       <p className="title font-bold">{Math.round(percentage)}%</p>
       <p className={`text-right text-sm ${classColor}`}>
         {changePercentage > 0 ? "▲ " : "▼ "} &nbsp;&nbsp;

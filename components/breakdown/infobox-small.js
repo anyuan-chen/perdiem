@@ -15,7 +15,7 @@ export default function InfoboxSmall({
     currency: "USD",
   });
   return (
-    <div className="container p-4 border-box gap-1 place-items-end items-center row-span-2">
+    <div className="container p-4 border-box gap-1 place-items-end items-center row-span-2 bg-white">
       <p></p>
       <p className="uppercase text-right tracking-widest text-gray-900 col-span-2">
         {category}
