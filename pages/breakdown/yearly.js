@@ -5,6 +5,8 @@ import InfoboxSmall from "../../components/breakdown/infobox-small";
 import InfoboxBig from "../../components/breakdown/infobox-big";
 import CompletionBar from "../../components/breakdown/bar";
 import { Line } from "react-chartjs-2";
+import toCsv from "../../components/utils/json2csv";
+import spendingData from "../../data/spendingData.json";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -189,12 +191,15 @@ export default function YearBreakdown() {
           >
             See monthly breakdown
           </button>
-          <button
-            type="button"
+          <a
             className="uppercase text-center font-semibold tracking-widest text-white rounded-md bg-sky-600 p-4 py-2"
+            href={`data:application/json;charset=utf-8,${encodeURIComponent(
+              toCsv(spendingData)
+            )}`}
+            download="data.csv"
           >
             Export daily spending
-          </button>
+          </a>
         </div>
       </div>
       <style jsx>{`
