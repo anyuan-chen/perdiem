@@ -1,661 +1,661 @@
 [
   {
     "name": "Loblaws",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 69.52,
     "time": "2022-01-31T11:24:00.000Z"
   },
   {
     "name": "Subway",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 77.49,
     "time": "2022-01-31T20:20:00.000Z"
   },
   {
     "name": "Amazon",
-    "category": "other",
+    "category": "Other",
     "amount": 82.98,
     "time": "2022-01-31T18:11:00.000Z"
   },
   {
     "name": "Subway",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 47.06,
     "time": "2022-01-31T12:53:00.000Z"
   },
   {
     "name": "eBay",
-    "category": "other",
+    "category": "Other",
     "amount": 26.55,
     "time": "2022-02-01T03:29:00.000Z"
   },
   {
     "name": "Dollarama",
-    "category": "other",
+    "category": "Other",
     "amount": 93.1,
     "time": "2022-02-01T21:09:00.000Z"
   },
   {
-    "name": "Food Basics",
-    "category": "grocery",
+    "name": "Restaurant Basics",
+    "category": "Groceries",
     "amount": 61.8,
     "time": "2022-02-01T12:00:00.000Z"
   },
   {
     "name": "Amazon",
-    "category": "other",
+    "category": "Other",
     "amount": 32.63,
     "time": "2022-02-01T23:50:00.000Z"
   },
   {
     "name": "Google Play",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 19.63,
     "time": "2022-02-01T16:33:00.000Z"
   },
   {
     "name": "Shoppers",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 47.59,
     "time": "2022-02-01T19:56:00.000Z"
   },
   {
     "name": "McDonald's",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 29.93,
     "time": "2022-02-02T14:24:00.000Z"
   },
   {
     "name": "Steam",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 80.19,
     "time": "2022-02-02T21:57:00.000Z"
   },
   {
     "name": "Shoppers",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 68.28,
     "time": "2022-02-02T18:58:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 91.36,
     "time": "2022-02-02T21:19:00.000Z"
   },
   {
     "name": "Amazon",
-    "category": "other",
+    "category": "Other",
     "amount": 16.4,
     "time": "2022-02-03T01:24:00.000Z"
   },
   {
     "name": "Dollarama",
-    "category": "other",
+    "category": "Other",
     "amount": 26.06,
     "time": "2022-02-03T19:44:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 59.54,
     "time": "2022-02-03T22:04:00.000Z"
   },
   {
     "name": "Steam",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 81.63,
     "time": "2022-02-03T13:12:00.000Z"
   },
   {
     "name": "Shoppers",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 1.02,
     "time": "2022-02-03T12:18:00.000Z"
   },
   {
-    "name": "Food Basics",
-    "category": "grocery",
+    "name": "Restaurant Basics",
+    "category": "Groceries",
     "amount": 80.84,
     "time": "2022-02-03T14:43:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 10.27,
     "time": "2022-02-05T03:09:00.000Z"
   },
   {
     "name": "Uber",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 30.59,
     "time": "2022-02-04T19:35:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 19.63,
     "time": "2022-02-05T02:49:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 71,
     "time": "2022-02-05T02:04:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 21.05,
     "time": "2022-02-04T23:27:00.000Z"
   },
   {
     "name": "Subway",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 81.8,
     "time": "2022-02-05T19:48:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 44.68,
     "time": "2022-02-05T13:15:00.000Z"
   },
   {
     "name": "Amazon",
-    "category": "other",
+    "category": "Other",
     "amount": 18,
     "time": "2022-02-05T20:17:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 3.3,
     "time": "2022-02-05T17:04:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 22.99,
     "time": "2022-02-05T22:47:00.000Z"
   },
   {
     "name": "McDonald's",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 39.92,
     "time": "2022-02-06T20:05:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 58.65,
     "time": "2022-02-07T03:41:00.000Z"
   },
   {
     "name": "Subway",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 68.32,
     "time": "2022-02-06T19:10:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 23.87,
     "time": "2022-02-07T00:48:00.000Z"
   },
   {
     "name": "Costco",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 19.24,
     "time": "2022-02-06T17:53:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 17.2,
     "time": "2022-02-08T03:44:00.000Z"
   },
   {
-    "name": "Food Basics",
-    "category": "grocery",
+    "name": "Restaurant Basics",
+    "category": "Groceries",
     "amount": 79.23,
     "time": "2022-02-07T11:17:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 81.59,
     "time": "2022-02-07T21:13:00.000Z"
   },
   {
     "name": "Shoppers",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 13.17,
     "time": "2022-02-07T21:20:00.000Z"
   },
   {
     "name": "Costco",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 6.45,
     "time": "2022-02-08T00:55:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 9.27,
     "time": "2022-02-09T02:14:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 3.93,
     "time": "2022-02-08T11:43:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 54.56,
     "time": "2022-02-08T12:40:00.000Z"
   },
   {
     "name": "Costco",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 19.39,
     "time": "2022-02-08T11:48:00.000Z"
   },
   {
     "name": "Loblaws",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 59.79,
     "time": "2022-02-08T14:27:00.000Z"
   },
   {
     "name": "Best Buy",
-    "category": "other",
+    "category": "Other",
     "amount": 13.16,
     "time": "2022-02-09T20:08:00.000Z"
   },
   {
     "name": "Amazon",
-    "category": "other",
+    "category": "Other",
     "amount": 47.29,
     "time": "2022-02-09T14:10:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 37.53,
     "time": "2022-02-09T21:36:00.000Z"
   },
   {
     "name": "Uber",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 61.77,
     "time": "2022-02-09T11:36:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 89.91,
     "time": "2022-02-09T16:05:00.000Z"
   },
   {
     "name": "Loblaws",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 9.92,
     "time": "2022-02-11T01:52:00.000Z"
   },
   {
     "name": "Google Play",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 34.32,
     "time": "2022-02-10T11:31:00.000Z"
   },
   {
     "name": "Best Buy",
-    "category": "other",
+    "category": "Other",
     "amount": 1.84,
     "time": "2022-02-10T13:36:00.000Z"
   },
   {
     "name": "McDonald's",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 80.92,
     "time": "2022-02-11T01:22:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 95.27,
     "time": "2022-02-10T13:28:00.000Z"
   },
   {
     "name": "Loblaws",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 16.8,
     "time": "2022-02-12T03:19:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 99.16,
     "time": "2022-02-11T16:53:00.000Z"
   },
   {
     "name": "Costco",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 97.31,
     "time": "2022-02-11T13:56:00.000Z"
   },
   {
     "name": "Uber",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 83.81,
     "time": "2022-02-11T21:07:00.000Z"
   },
   {
     "name": "Shoppers",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 47.72,
     "time": "2022-02-11T18:00:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 14.59,
     "time": "2022-02-12T19:27:00.000Z"
   },
   {
     "name": "Best Buy",
-    "category": "other",
+    "category": "Other",
     "amount": 60.8,
     "time": "2022-02-13T01:58:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 30.8,
     "time": "2022-02-12T17:28:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 64.23,
     "time": "2022-02-12T20:02:00.000Z"
   },
   {
     "name": "Amazon",
-    "category": "other",
+    "category": "Other",
     "amount": 15.24,
     "time": "2022-02-12T18:16:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 5.27,
     "time": "2022-02-14T01:49:00.000Z"
   },
   {
     "name": "Steam",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 46.45,
     "time": "2022-02-13T21:48:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 61.17,
     "time": "2022-02-13T16:15:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 15.36,
     "time": "2022-02-13T15:23:00.000Z"
   },
   {
     "name": "McDonald's",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 13.78,
     "time": "2022-02-13T17:09:00.000Z"
   },
   {
     "name": "Google Play",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 93.98,
     "time": "2022-02-14T11:36:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 78.16,
     "time": "2022-02-14T17:14:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 63.69,
     "time": "2022-02-14T20:23:00.000Z"
   },
   {
     "name": "McDonald's",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 60.86,
     "time": "2022-02-15T02:27:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 37.36,
     "time": "2022-02-15T02:15:00.000Z"
   },
   {
     "name": "eBay",
-    "category": "other",
+    "category": "Other",
     "amount": 25.03,
     "time": "2022-02-16T02:04:00.000Z"
   },
   {
     "name": "McDonald's",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 1.27,
     "time": "2022-02-15T12:28:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 13.58,
     "time": "2022-02-15T16:38:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 81.04,
     "time": "2022-02-15T20:34:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 29.93,
     "time": "2022-02-16T03:32:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 14.01,
     "time": "2022-02-16T19:25:00.000Z"
   },
   {
-    "name": "Food Basics",
-    "category": "grocery",
+    "name": "Restaurant Basics",
+    "category": "Groceries",
     "amount": 31.41,
     "time": "2022-02-16T11:01:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 34.25,
     "time": "2022-02-16T20:53:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 86.52,
     "time": "2022-02-16T20:05:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 16.62,
     "time": "2022-02-16T13:01:00.000Z"
   },
   {
     "name": "eBay",
-    "category": "other",
+    "category": "Other",
     "amount": 45.34,
     "time": "2022-02-17T20:14:00.000Z"
   },
   {
     "name": "Dollarama",
-    "category": "other",
+    "category": "Other",
     "amount": 6.91,
     "time": "2022-02-17T15:05:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 55.01,
     "time": "2022-02-17T11:43:00.000Z"
   },
   {
     "name": "Subway",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 40.81,
     "time": "2022-02-17T20:24:00.000Z"
   },
   {
     "name": "McDonald's",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 37.43,
     "time": "2022-02-18T03:12:00.000Z"
   },
   {
     "name": "Best Buy",
-    "category": "other",
+    "category": "Other",
     "amount": 16.01,
     "time": "2022-02-18T17:27:00.000Z"
   },
   {
     "name": "Steam",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 33.14,
     "time": "2022-02-18T14:29:00.000Z"
   },
   {
     "name": "Magic Noodle",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 95.51,
     "time": "2022-02-18T22:21:00.000Z"
   },
   {
     "name": "Amazon",
-    "category": "other",
+    "category": "Other",
     "amount": 40.14,
     "time": "2022-02-18T15:38:00.000Z"
   },
   {
     "name": "Shoppers",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 9.1,
     "time": "2022-02-18T16:50:00.000Z"
   },
   {
     "name": "Costco",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 18.77,
     "time": "2022-02-19T14:06:00.000Z"
   },
   {
     "name": "Loblaws",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 53.7,
     "time": "2022-02-19T21:06:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 25.86,
     "time": "2022-02-19T20:16:00.000Z"
   },
   {
     "name": "Subway",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 62.47,
     "time": "2022-02-19T23:50:00.000Z"
   },
   {
     "name": "Shoppers",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 94.39,
     "time": "2022-02-20T00:26:00.000Z"
   },
   {
     "name": "Google Play",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 6.85,
     "time": "2022-02-20T11:07:00.000Z"
   },
   {
     "name": "TTC",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 11.31,
     "time": "2022-02-20T16:01:00.000Z"
   },
   {
     "name": "Bombay's Chutney",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 20.31,
     "time": "2022-02-20T22:46:00.000Z"
   },
   {
     "name": "eBay",
-    "category": "other",
+    "category": "Other",
     "amount": 81.99,
     "time": "2022-02-21T03:41:00.000Z"
   },
   {
     "name": "Loblaws",
-    "category": "grocery",
+    "category": "Groceries",
     "amount": 68.96,
     "time": "2022-02-20T12:48:00.000Z"
   },
   {
     "name": "Subway",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 51.4,
     "time": "2022-02-21T14:47:00.000Z"
   },
   {
     "name": "Pizza Pizza",
-    "category": "food",
+    "category": "Restaurant",
     "amount": 32.81,
     "time": "2022-02-21T14:46:00.000Z"
   },
   {
     "name": "Amazon",
-    "category": "other",
+    "category": "Other",
     "amount": 40.09,
     "time": "2022-02-22T02:39:00.000Z"
   },
   {
     "name": "Uber",
-    "category": "transport",
+    "category": "Transportation",
     "amount": 43.42,
     "time": "2022-02-21T18:11:00.000Z"
   },
   {
     "name": "Google Play",
-    "category": "fun",
+    "category": "Recreation",
     "amount": 72.8,
     "time": "2022-02-22T01:20:00.000Z"
   }
