@@ -68,7 +68,7 @@ export default function YearBreakdown() {
             totalMoney={9890}
           />
         </div>
-        <h1 className="title">Your biggest offenders were...</h1>
+        <h1 className="title mt-8">Your biggest offenders were...</h1>
         <div className="bar-container flex flex-col p-6">
           <CompletionBar
             percentage={69}
@@ -76,7 +76,7 @@ export default function YearBreakdown() {
             cost={342.2}
           />
         </div>
-        <h1 className="title">On average you spent...</h1>
+        <h1 className="title mt-8">On average you spent...</h1>
         <div className="flex flex-col gap-8">
           <ResultCard
             title="Monthly"
@@ -152,7 +152,25 @@ export default function YearBreakdown() {
             </p>
           </div>
         </div>
-        <div className="bar-container flex justify-center items-center p-6"></div>
+        <h1 className="title mt-8">Your overall rating is :pensive: 😔</h1>
+        <div className="flex gap-6 p-6 w-full h-80 flex-wrap">
+          <div className="bar-container w-2/5 flex-grow flex flex-col justify-center items-center p-6">
+            <p className="uppercase text-center tracking-widest text-gray-900 col-span-2">
+              You were over budget
+            </p>
+            <h4 className="title">80%</h4>
+            <h2 className="font-medium text-2xl text-gray-400">of the time</h2>
+          </div>
+          <div className="bar-container w-2/5 flex-grow flex flex-col justify-center items-center p-6">
+            <p className="uppercase text-center tracking-widest text-gray-900 col-span-2">
+              You spent
+            </p>
+            <h4 className="title">10%</h4>
+            <h2 className="font-medium text-2xl text-gray-400">
+              less than last year
+            </h2>
+          </div>
+        </div>
       </div>
       <style jsx>{`
         .container {
@@ -165,6 +183,10 @@ export default function YearBreakdown() {
           font-size: 2.5rem;
           color: #474747;
           line-height: 5rem;
+        }
+
+        h4.title {
+          font-size: 4rem;
         }
 
         .subtitle {
