@@ -4,21 +4,25 @@ import { motion } from "framer-motion";
 import CalendarDay from "./calendarDay";
 import { useEffect } from "react";
 
-var dates = [];
-
+var dateComponents = [];
+for (
+  var i = new Date(2022, 1, 28);
+  i < new Date(2022, 3, 4);
+  i.setDate(i.getDate() + 1)
+) {
+  dateComponents.push(<CalendarDay date={i}></CalendarDay>);
+}
 
 export default function Calendar() {
-  var date = new Date(2022,1,28)
-  useEffect(() => {
-    for (var i = new Date(2022,1,28); i < new Date(2022,3,4); i.setDate(i.getDate() + 1))
-        dates.push();
-    }
-    
-  }, [dates])
-  
   return (
-    <div className="rounded-xl h-full" style={{ background: "linear-gradient(to right, #75C5FF, #1C69FF)", padding: "1px" }}>
-      <div className="flex flex-col align-center h-full bg-white rounded-xl px-12" >
+    <div
+      className="rounded-xl h-full"
+      style={{
+        background: "linear-gradient(to right, #75C5FF, #1C69FF)",
+        padding: "1px",
+      }}
+    >
+      <div className="flex flex-col align-center h-full bg-white rounded-xl px-12">
         <div className="flex pt-8 justify-center">
           <motion.button
             className="rounded-full w-12 h-12 flex items-center justify-center"
