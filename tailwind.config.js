@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         display: "Manrope",
       },
+      backgroundImage: {
+        "card-small": "url('/design/card.svg')",
+      },
     },
   },
   plugins: [],
