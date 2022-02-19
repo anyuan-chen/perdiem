@@ -43,7 +43,7 @@ export default function Navbar() {
 
       <hr className="mx-24 border-dividerGray"></hr>
 
-      <ul className="flex flex-col  text-textGray pr-16 pt-10 space-y-8 pb-10">
+      <ul className="flex flex-col  text-textGray pr-16 pt-10 space-y-4 pb-10">
         <button className=" w-full">
           <motion.div
             className={`py-4 rounded-r-full ${
@@ -67,7 +67,7 @@ export default function Navbar() {
 
         <button className=" w-full">
           <motion.div
-            className={`py-1 rounded-r-full ${
+            className={`py-4 rounded-r-full ${
               router.route === "/breakdown/" ? highlightStyling : ""
             }`}
             whileHover={{
@@ -88,7 +88,7 @@ export default function Navbar() {
 
         <button className=" w-full">
           <motion.div
-            className={`py-1 rounded-r-full ${
+            className={`py-4 rounded-r-full ${
               router.route === "/breakdown/weekly" ? highlightStyling : ""
             }`}
             whileHover={{
@@ -109,10 +109,10 @@ export default function Navbar() {
       </ul>
       <hr className="mx-24 border-dividerGray"></hr>
 
-      <ul className="text-textGray pt-10 space-y-8 pb-10">
+      <ul className="text-textGray pt-10 space-y-4 pb-10">
         <button className=" w-full">
           <motion.div
-            className={`py-4 rounded-r-full ${
+            className={`py-3 rounded-r-full ${
               router.route === "/goals" ? highlightStyling : ""
             }`}
             whileHover={{
@@ -132,7 +132,7 @@ export default function Navbar() {
         </button>
         <button className=" w-full">
           <motion.div
-            className={`py-4 rounded-r-full ${
+            className={`py-3 rounded-r-full ${
               router.route === "/settings" ? highlightStyling : ""
             }`}
           >
@@ -149,7 +149,7 @@ export default function Navbar() {
         </button>
         <button className=" w-full ">
           <motion.div
-            className={`py-4 rounded-r-full ${
+            className={`py-3 rounded-r-full ${
               router.route === "/faq" ? highlightStyling : ""
             }`}
             whileHover={{
