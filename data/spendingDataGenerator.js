@@ -1,18 +1,26 @@
-// run w/ node and copy to spendingData.json
+#!/usr/bin/node
+// run w/ node
+const fs = require("fs");
 
 const RESULTS_PER_DAY = 5;
 const STORES = [
-  "Loblaws",
-  "Best Buy",
-  "Costco",
-  "Food Basics",
-  "Shoppers",
-  "McDonald's",
-  "Amazon",
-  "eBay",
-  "Dollarama",
-  "Steam",
-  "Google Play",
+  { name: "Loblaws", category: "grocery" },
+  { name: "Costco", category: "grocery" },
+  { name: "Food Basics", category: "grocery" },
+  { name: "Shoppers", category: "grocery" },
+  { name: "McDonald's", category: "food" },
+  { name: "Pizza Pizza", category: "food" },
+  { name: "Magic Noodle", category: "food" },
+  { name: "Bombay's Chutney", category: "food" },
+  { name: "Subway", category: "food" },
+  { name: "Amazon", category: "other" },
+  { name: "eBay", category: "other" },
+  { name: "Dollarama", category: "other" },
+  { name: "Best Buy", category: "other" },
+  { name: "Steam", category: "fun" },
+  { name: "Google Play", category: "fun" },
+  { name: "TTC", category: "transport" },
+  { name: "Uber", category: "transport" },
 ];
 const PRICE_RANGE = { start: 0.01, end: 100.0 };
 const DATE_RANGE = {
@@ -33,11 +41,14 @@ for (
     newDate.setHours(Math.floor(rng(6, 23)));
     newDate.setMinutes(Math.floor(rng(0, 59)));
     list.push({
-      store: STORES[Math.floor(rng(0, STORES.length))],
+      ...STORES[Math.floor(rng(0, STORES.length))],
       amount: +rng(PRICE_RANGE.start, PRICE_RANGE.end).toFixed(2),
       time: newDate.toISOString(), // no random minutes
     });
   }
 }
 
-console.log(JSON.stringify(list, null, 2));
+fs.writeFile("spendingData.json", JSON.stringify(list, null, 2), (err) => {
+  if (err) return console.log(err);
+  console.log("Wrote to spendingData.json");
+});
