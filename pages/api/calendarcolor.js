@@ -38,8 +38,6 @@ export default function handler(req, res) {
         ...val,
         severity: index,
         spending: sumPurchasesOnDate[date],
-        mean,
-        stdev,
       });
     }
   }
