@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-export default function BankCard({ pairList, type }) {
+export default function BankCard({ pairList, type, ...props }) {
   /* {title: string, value: float | string}[] */
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -9,7 +9,7 @@ export default function BankCard({ pairList, type }) {
   });
 
   var bankImgSource = pairList.length >= 3 ? "bankcard-big" : "bankcard";
-  if (type === "goal"){
+  if (type === "goal") {
     bankImgSource = "goalcard";
   }
   const headerSpacing = pairList.length >= 3 ? "2px" : "11px";
@@ -40,6 +40,7 @@ export default function BankCard({ pairList, type }) {
             <p className="budget-value">{pair.value}</p>
           </div>
         ))}
+        {props.children}
       </div>
       <style jsx>
         {`

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import spendingData from "../../data/spendingData.json";
 import Navbar from "../../components/shared/navbar";
 import CompletionBar from "../../components/shared/simplebar";
+import BankCard from "../../components/shared/bankcard";
 
 const allDays = [
   ...new Set(spendingData.map((i) => i.time.substring(0, i.time.indexOf("T")))),
@@ -15,6 +16,8 @@ for (const d of allDays) {
 }
 
 export default function Day({ day }) {
+  const bankColor =
+    Math.abs(5) <= 5 ? "yellow" : changePercentage < 0 ? "green" : "red";
   return (
     <div>
       <Navbar />
@@ -58,7 +61,18 @@ export default function Day({ day }) {
             </div>
           </div>
         </div>
-        <div className="row-span-2">another bank card</div>
+        <div className="row-span-2">
+          <BankCard
+            pairList={[
+              { title: "recommended spending", value: "$400" },
+              { title: "money spent today", value: 338.34 },
+            ]}
+          >
+            <p className={`text-sm ${bankColor}`}>
+              {5 < 0 ? "▲ " : "▼ "}&nbsp;&nbsp; 10% less than the recommended
+            </p>
+          </BankCard>
+        </div>
         <div className="row-span-4">purchase history</div>
         <div className="row-span-2">goal save</div>
 
@@ -67,6 +81,19 @@ export default function Day({ day }) {
             margin-left: 25vw;
             width: 75vw;
           }
+
+          p.yellow {
+            color: #ff9900;
+          }
+
+          p.red {
+            color: #ff4d00;
+          }
+
+          p.green {
+            color: #489c6a;
+          }
+
           * {
             font-family: "Manrope", sans-serif;
           }
