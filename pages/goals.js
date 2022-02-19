@@ -3,7 +3,9 @@ import React from "react";
 import BankCard from "../components/shared/bankcard";
 import Navbar from "../components/shared/navbar";
 import Link from "next/link";
-import autoprefixer from "autoprefixer";
+import CompletionBar from "../components/breakdown/bar"
+import Goal from "../components/goals/goal";
+
 const pairList = [
   {
     title: "total bank balance",
@@ -84,27 +86,10 @@ export default function Goals() {
                 <img src="/photos/plus.svg" alt="plus"></img>
               </button>
             </div>
-            <div className="py-8 px-8 flex">
-              <h1
-                style={{
-                  fontSize: "24px",
-                  lineHeight: "33px",
-                  color: "#474747",
-                }}
-              >
-                Save for A Car
-              </h1>
-              <img
-                src="/photos/greenarrow.svg"
-                alt="writing"
-                style={{
-                  marginLeft: "auto",
-                }}
-              ></img>
-              <h4 style={{ color: "#489C6A", justifyContent: "" }}>
-                You are on track to finish in 14 months, keep it up!
-              </h4>
+            <div className="pb-4 px-8 flex">
+              <Goal></Goal>
             </div>
+            
           </div>
         </div>
       </div>
