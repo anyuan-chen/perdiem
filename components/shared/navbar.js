@@ -4,8 +4,12 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-96 h-screen flex flex-col">
-      <img src="/photos/portrait.jpeg" alt="profile pic"></img>
+    <nav className="w-64 h-screen flex flex-col font-display">
+      <img
+        className="rounded-full"
+        src="/photos/portrait.jpeg"
+        alt="profile pic"
+      ></img>
       <div>
         <h1>Aileen Luo</h1>
       </div>
@@ -14,9 +18,13 @@ export default function Navbar() {
           <Link href="/breakdown/yearly">
             <a>Yearly Breakdown</a>
           </Link>
+        </li>
+        <li>
           <Link href="/breakdown/monthly">
             <a>Monthly Breakdown</a>
           </Link>
+        </li>
+        <li>
           <Link href="/breakdown/weekly">
             <a>Weekly Breakdown</a>
           </Link>
