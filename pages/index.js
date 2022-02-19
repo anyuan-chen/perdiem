@@ -14,16 +14,11 @@ export default function Home() {
       title: "money spent today",
       value: 22003.98,
     },
-    {
-      title: "Chequeing account",
-      value: "XXXXXXXXXXXXXXXXXX",
-    },
   ];
   return (
     <div className="flex ">
       <div>
         <BankCard pairList={pairList}></BankCard>
-        <img src="/photos/Card Group.png" />
       </div>
       <Navbar></Navbar>
       <Calendar></Calendar>
