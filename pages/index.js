@@ -74,31 +74,18 @@ export const getServerSideProps = async (context) => {
   ) {
     const date = i.toISOString();
 
-    let data;
     let httpProtocol;
-
     if (context.req.headers.host.includes("localhost")) {
       httpProtocol = "http";
     } else {
       httpProtocol = "https";
     }
 
-    try {
-      const yyyymmdd = i.toISOString().substr(0, 10);
-      const res = await fetch(
-        `${httpProtocol}://${context.req.headers.host}/api/calendarcolor?date=${yyyymmdd}`,
-        {
-          method: "POST",
-          body: JSON.stringify({ type: "FETCH_PRODUCTS" }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      req = await res.json();
-    } catch (error) {
-      data = error;
-    }
+    const yyyymmdd = i.toISOString().substr(0, 10);
+    const res = await fetch(
+      `${httpProtocol}://${context.req.headers.host}/api/calendarcolor?date=${yyyymmdd}`
+    );
+    const req = await res.json();
 
     var color = req.color;
     var spending = req.spending;
@@ -117,4 +104,4 @@ export const getServerSideProps = async (context) => {
       dayInfo: dayInfo,
     },
   };
-}
+};
