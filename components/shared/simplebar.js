@@ -9,6 +9,7 @@ export default function CompletionBar({ percentage, color }) {
           height: 1.5rem;
           background: #e5e5e5;
           border-radius: 0.5rem;
+          width: 100%;
         }
 
         .color-bar {

@@ -21,7 +21,7 @@ export default function Day({ day }) {
   return (
     <div>
       <Navbar />
-      <div className="container grid grid-cols-2 grid-rows-6 w-full p-8">
+      <div className="container grid grid-cols-2 grid-rows-6 w-full p-8 gap-8">
         <header className="flex items-center justify-center col-span-2">
           <motion.button
             className="rounded-full w-12 h-12 flex items-center justify-center"
@@ -73,7 +73,21 @@ export default function Day({ day }) {
             </p>
           </BankCard>
         </div>
-        <div className="row-span-4">purchase history</div>
+        <div className="bg-white border-blue-300 rounded-lg border py-4 px-4 px-10 row-span-4 flex flex-col gap-3 items-center">
+          <h1 className="text-2xl font-bold text-gray-800 mb-2">
+            Purchase History
+          </h1>
+          <CompletionBar percentage={60} color="#2e77cd" />
+          <div className="flex justify-between w-full mb-5">
+            <p className="text-sm">Costco | 60% of daily spending</p>
+            <p className="text-sm">$60</p>
+          </div>
+          <CompletionBar percentage={60} color="#2e77cd" />
+          <div className="flex justify-between w-full mb-5">
+            <p className="text-sm">Costco | 60% of daily spending</p>
+            <p className="text-sm">$60</p>
+          </div>
+        </div>
         <div className="row-span-2">goal save</div>
 
         <style jsx>{`
