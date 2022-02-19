@@ -1,8 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
+  const router = useRouter();
+  console.log(router.route);
+  const textStyling = "text-navbarActiveText";
+  const highlightStyling = "bg-navbarActiveHighlight";
+
   return (
     <nav className="w-20vw h-screen flex flex-col font-display">
       <img
@@ -10,53 +16,136 @@ export default function Navbar() {
         src="/photos/portrait.jpeg"
         alt="profile pic"
       ></img>
-      <div className=" w-full pr-16">
-        <div className="bg-navbarActiveHighlight rounded-r-full">
-          <h3 className="pl-16 py-2 font-bold text-navbarActiveText mb-8">
+
+      <button className=" w-full pr-16">
+        <div
+          className={`rounded-r-full ${
+            router.route === "/dashboard" ? highlightStyling : ""
+          }`}
+        >
+          <h3
+            className={`text-left pl-16  font-bold  ${
+              router.route === "/dashboard" ? textStyling : ""
+            }`}
+          >
             Dashboard
           </h3>
         </div>
-      </div>
+      </button>
+
       <hr className="mx-16"></hr>
-      <ul className="flex flex-col space-y-8">
-        <li>
-          <Link href="/breakdown/yearly">
-            <a>Yearly Breakdown</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/breakdown/monthly">
-            <a>Monthly Breakdown</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/breakdown/weekly">
-            <a>Weekly Breakdown</a>
-          </Link>
-        </li>
+
+      <ul className="flex flex-col space-y-8 text-textGray pr-16">
+        <button className=" w-full">
+          <div
+            className={`rounded-r-full ${
+              router.route === "/breakdown/yearly" ? highlightStyling : ""
+            }`}
+          >
+            <Link href="/breakdown/yearly" passHref>
+              <h3
+                className={`text-left pl-16  font-bold  ${
+                  router.route === "/breakdown/yearly" ? textStyling : ""
+                }`}
+              >
+                <a>Yearly Breakdown</a>
+              </h3>
+            </Link>
+          </div>
+        </button>
+
+        <button className=" w-full">
+          <div
+            className={`rounded-r-full ${
+              router.route === "/breakdown/yearly" ? highlightStyling : ""
+            }`}
+          >
+            <Link href="/breakdown/monthly" passHref>
+              <h3
+                className={`text-left pl-16  font-bold  ${
+                  router.route === "/breakdown/monthly" ? textStyling : ""
+                }`}
+              >
+                <a>Monthly Breakdown</a>
+              </h3>
+            </Link>
+          </div>
+        </button>
+
+        <button className=" w-full">
+          <div
+            className={`rounded-r-full ${
+              router.route === "/breakdown/weekly" ? highlightStyling : ""
+            }`}
+          >
+            <Link href="/breakdown/yearly" passHref>
+              <h3
+                className={`text-left pl-16 font-bold  ${
+                  router.route === "/breakdown/weekly" ? textStyling : ""
+                }`}
+              >
+                <a>Weekly Breakdown</a>
+              </h3>
+            </Link>
+          </div>
+        </button>
       </ul>
       <hr className="mx-16"></hr>
 
-      <ul>
-        <li>
-          <Link href="/goals">
-            <a>Your Goals</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/settings">
-            <a>Settings</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/faq">
-            <a>FAQ</a>
-          </Link>
-        </li>
+      <ul className="text-textGray space-y-8">
+        <button className=" w-full">
+          <div
+            className={`rounded-r-full ${
+              router.route === "/goals" ? highlightStyling : ""
+            }`}
+          >
+            <Link href="/goals" passHref>
+              <h3
+                className={`text-left pl-16  font-bold  ${
+                  router.route === "/goals" ? textStyling : ""
+                }`}
+              >
+                <a>Your Goals</a>
+              </h3>
+            </Link>
+          </div>
+        </button>
+        <button className=" w-full">
+          <div
+            className={`rounded-r-full ${
+              router.route === "/settings" ? highlightStyling : ""
+            }`}
+          >
+            <Link href="/settings" passHref>
+              <h3
+                className={`text-left pl-16  font-bold  ${
+                  router.route === "/settings" ? textStyling : ""
+                }`}
+              >
+                <a>Settings</a>
+              </h3>
+            </Link>
+          </div>
+        </button>
+        <button className=" w-full ">
+          <div
+            className={`rounded-r-full ${
+              router.route === "/faq" ? highlightStyling : ""
+            }`}
+          >
+            <Link href="/faq" passHref>
+              <h3
+                className={`text-left pl-16  font-bold  ${
+                  router.query === "/faq" ? textStyling : ""
+                }`}
+              >
+                <a>FAQ</a>
+              </h3>
+            </Link>
+          </div>
+        </button>
       </ul>
-      <div>
-          
-      </div>
+      <div></div>
     </nav>
   );
 }
