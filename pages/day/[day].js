@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import spendingData from "../../data/spendingData.json";
 import Navbar from "../../components/shared/navbar";
-import CompletionBar from "../../components/breakdown/bar";
+import CompletionBar from "../../components/shared/simplebar";
 
 const allDays = [
   ...new Set(spendingData.map((i) => i.time.substring(0, i.time.indexOf("T")))),
@@ -36,7 +36,7 @@ export default function Day({ day }) {
         </header>
         <div className="col-span-2 bg-white p-4">
           <div className="grid">
-            <CompletionBar percentage={78} />
+            <CompletionBar percentage={78} color="#ff9900" />
           </div>
         </div>
         <div className="row-span-2">another bank card</div>

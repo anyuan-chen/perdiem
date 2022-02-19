@@ -8,7 +8,7 @@ export default function BreakdownBar({ percentage, description, cost }) {
   });
   return (
     <div className="">
-      <CompletionBar percentage={percentage} color="#e5e5e5" />
+      <CompletionBar percentage={percentage} color="#2e77cd" />
       <div className="flex justify-between mt-3">
         <p className="font-semibold text-gray-500">{description}</p>
         <p className="font-semibold text-gray-900">{formatter.format(cost)}</p>
