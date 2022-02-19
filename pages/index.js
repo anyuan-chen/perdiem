@@ -5,13 +5,25 @@ import BankCard from "../components/shared/bankcard";
 import Navbar from "../components/shared/navbar";
 
 export default function Home() {
+  const pairList = [
+    {
+      title: "total bank balance",
+      value: 338.34,
+    },
+    {
+      title: "money spent today",
+      value: 22003.98,
+    },
+    {
+      title: "Chequeing account",
+      value: "XXXXXXXXXXXXXXXXXX",
+    },
+  ];
   return (
     <div className="flex ">
       <div>
-        <BankCard
-          budgetRemaining={338.34}
-          recommendedSpending={123.45}
-        ></BankCard>
+        <BankCard pairList={pairList}></BankCard>
+        <img src="/photos/Card Group.png" />
       </div>
       <Navbar></Navbar>
       <Calendar></Calendar>

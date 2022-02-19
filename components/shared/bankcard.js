@@ -1,25 +1,42 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-export default function BankCard({ budgetRemaining, recommendedSpending }) {
+export default function BankCard({ pairList }) {
+  /* {title: string, value: float | string}[] */
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
   });
-  const formattedSpending = formatter.format(recommendedSpending);
-  const formattedBudget = formatter.format(budgetRemaining).substring(1);
+
+  const bankImgSource = pairList.length >= 3 ? "bankcard-big" : "bankcard";
+  const headerSpacing = pairList.length >= 3 ? "2px" : "11px";
+
+  // woo fragile
+  const formattedPairList = pairList.map((p, i) => {
+    return {
+      title: p.title,
+      value: (() => {
+        if (typeof p.value === "number") {
+          if (i === 0) {
+            return formatter.format(p.value).substring(1);
+          }
+          return formatter.format(p.value);
+        }
+        return p.value;
+      })(),
+    };
+  });
+
   return (
     <div className="container">
-      <img src="/photos/bankcard-bg.svg" width="auto" alt="bg-card" />
+      <img src={`/photos/${bankImgSource}-bg.svg`} width="auto" alt="bg-card" />
       <div className="body-text">
-        <div className="">
-          <h2>MONEY LEFT IN BUDGET</h2>
-          <p className="budget-value">{formattedBudget}</p>
-        </div>
-        <div>
-          <h2>RECOMMENDED SPENDING</h2>
-          <p className="budget-value">{formattedSpending}</p>
-        </div>
+        {formattedPairList.map((pair, i) => (
+          <div key={i}>
+            <h2>{pair.title}</h2>
+            <p className="budget-value">{pair.value}</p>
+          </div>
+        ))}
       </div>
       <style jsx>
         {`
@@ -35,7 +52,7 @@ export default function BankCard({ budgetRemaining, recommendedSpending }) {
             line-height: 19px;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            margin-bottom: 11px;
+            margin-bottom: ${headerSpacing};
             color: #474747;
           }
 
