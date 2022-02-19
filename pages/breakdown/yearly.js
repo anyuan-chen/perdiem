@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/shared/navbar";
 import ResultCard from "../../components/breakdown/resultcard";
 import InfoboxSmall from "../../components/breakdown/infobox-small";
+import InfoboxBig from "../../components/breakdown/infobox-big";
 
 export default function YearBreakdown() {
   const monthlyDescription = "August was your best month, with $6,000.20 spent";
@@ -18,12 +19,30 @@ export default function YearBreakdown() {
           You destroyed your budget of $80,000. Let&apos;s see how you managed
           to do it.
         </h3>
-        <div className="grid ">
+        <div className="grid grid-flow-row-dense grid-cols-2 grid-rows-3">
           <InfoboxSmall
-            percentage={1}
-            changePercentage={-3}
-            category="money"
+            percentage={16}
+            changePercentage={10}
+            category="Entertainment"
             totalMoney={12.3}
+          />
+          <InfoboxBig
+            percentage={23}
+            changePercentage={-1}
+            category="Groceries"
+            totalMoney={7892.01}
+          />
+          <InfoboxBig
+            percentage={23}
+            changePercentage={-1}
+            category="Groceries"
+            totalMoney={7892.01}
+          />
+          <InfoboxSmall
+            percentage={16}
+            changePercentage={-10}
+            category="Recreation"
+            totalMoney={9890}
           />
         </div>
         <h1 className="title">Your biggest offenders were...</h1>

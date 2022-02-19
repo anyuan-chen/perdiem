@@ -1,4 +1,4 @@
-export default function InfoboxSmall({
+export default function Big({
   percentage,
   changePercentage,
   category,
@@ -15,23 +15,20 @@ export default function InfoboxSmall({
     currency: "USD",
   });
   return (
-    <div className="container p-4 border-box">
-      <p></p>
-      <p className="uppercase tracking-widest text-gray-900">{category}</p>
-      <p></p>
+    <div className="container p-4 flex flex-col justify-between items-center row-span-2">
+      <p className="title font-bold">{Math.round(percentage)}%</p>
       <p className={`text-right text-sm ${classColor}`}>
         {changePercentage > 0 ? "▲ " : "▼ "} &nbsp;&nbsp;
         {Math.abs(Math.round(changePercentage))}% from last year
       </p>
-      <p className="title text-right leading-10 font-bold">
-        {Math.round(percentage)}%
+      <p className="uppercase tracking-widest text-gray-900">{category}</p>
+
+      <p className="font-medium text-3xl text-gray-400">
+        {formatter.format(totalMoney)}
       </p>
-      <p className="text-right">{formatter.format(totalMoney)}</p>
 
       <style jsx>{`
         .container {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
           border: 1px solid #75c5ff66;
           border-radius: 0.75rem;
         }
