@@ -1,7 +1,537 @@
-
-{
+[
+  {
+    "store": "Dollarama",
+    "amount": 3.66,
+    "time": "2022-01-31T17:09:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 66.11,
+    "time": "2022-01-31T17:22:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 34.75,
+    "time": "2022-01-31T20:50:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 85.59,
+    "time": "2022-01-31T11:39:00.000Z"
+  },
+  {
     "store": "Loblaws",
-    "amount" : 32.66,
-    "time" : "19-FEB-2022 08:03"
-}
-
+    "amount": 59.3,
+    "time": "2022-01-31T14:09:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 4.24,
+    "time": "2022-02-02T03:32:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 47.24,
+    "time": "2022-02-01T17:11:00.000Z"
+  },
+  {
+    "store": "Dollarama",
+    "amount": 70.28,
+    "time": "2022-02-01T13:42:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 31.06,
+    "time": "2022-02-01T16:50:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 16.17,
+    "time": "2022-02-02T01:28:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 55.52,
+    "time": "2022-02-02T21:12:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 19.78,
+    "time": "2022-02-02T22:28:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 93.79,
+    "time": "2022-02-02T23:14:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 17.23,
+    "time": "2022-02-02T17:56:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 30.8,
+    "time": "2022-02-02T12:03:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 52.58,
+    "time": "2022-02-03T22:31:00.000Z"
+  },
+  {
+    "store": "Food Basics",
+    "amount": 70.59,
+    "time": "2022-02-03T16:11:00.000Z"
+  },
+  {
+    "store": "Food Basics",
+    "amount": 69.98,
+    "time": "2022-02-04T00:18:00.000Z"
+  },
+  {
+    "store": "Food Basics",
+    "amount": 1.51,
+    "time": "2022-02-04T03:14:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 41.44,
+    "time": "2022-02-03T20:19:00.000Z"
+  },
+  {
+    "store": "Dollarama",
+    "amount": 9.66,
+    "time": "2022-02-05T03:12:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 61.62,
+    "time": "2022-02-04T16:55:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 52.5,
+    "time": "2022-02-04T11:43:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 64.76,
+    "time": "2022-02-05T02:29:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 9.89,
+    "time": "2022-02-04T11:36:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 89.29,
+    "time": "2022-02-05T13:43:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 80.16,
+    "time": "2022-02-06T03:02:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 33.51,
+    "time": "2022-02-05T22:22:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 26.89,
+    "time": "2022-02-06T01:20:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 88.39,
+    "time": "2022-02-06T01:34:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 92.27,
+    "time": "2022-02-06T22:10:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 37.11,
+    "time": "2022-02-07T00:06:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 40.7,
+    "time": "2022-02-06T21:01:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 42.47,
+    "time": "2022-02-07T01:19:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 46.44,
+    "time": "2022-02-06T21:02:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 48.17,
+    "time": "2022-02-07T17:15:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 44.25,
+    "time": "2022-02-07T14:41:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 52.84,
+    "time": "2022-02-07T21:57:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 21.4,
+    "time": "2022-02-07T18:22:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 46.21,
+    "time": "2022-02-08T03:06:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 82.93,
+    "time": "2022-02-08T21:35:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 23.24,
+    "time": "2022-02-09T02:18:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 61.37,
+    "time": "2022-02-09T02:35:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 50.29,
+    "time": "2022-02-08T15:10:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 15.61,
+    "time": "2022-02-08T11:11:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 12.53,
+    "time": "2022-02-09T11:32:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 41.34,
+    "time": "2022-02-09T13:13:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 57.69,
+    "time": "2022-02-09T23:56:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 30.89,
+    "time": "2022-02-09T13:00:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 16.61,
+    "time": "2022-02-09T15:46:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 65.34,
+    "time": "2022-02-10T16:42:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 55.4,
+    "time": "2022-02-10T20:21:00.000Z"
+  },
+  {
+    "store": "Dollarama",
+    "amount": 87.49,
+    "time": "2022-02-10T13:12:00.000Z"
+  },
+  {
+    "store": "Food Basics",
+    "amount": 29.77,
+    "time": "2022-02-12T02:05:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 23.55,
+    "time": "2022-02-11T13:48:00.000Z"
+  },
+  {
+    "store": "Food Basics",
+    "amount": 98,
+    "time": "2022-02-11T15:50:00.000Z"
+  },
+  {
+    "store": "Food Basics",
+    "amount": 6.73,
+    "time": "2022-02-11T21:01:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 4.08,
+    "time": "2022-02-12T17:06:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 11.07,
+    "time": "2022-02-13T02:35:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 58.34,
+    "time": "2022-02-12T16:23:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 34.99,
+    "time": "2022-02-13T00:50:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 39.13,
+    "time": "2022-02-12T15:53:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 93.28,
+    "time": "2022-02-14T01:58:00.000Z"
+  },
+  {
+    "store": "Best Buy",
+    "amount": 16.44,
+    "time": "2022-02-13T23:32:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 67.35,
+    "time": "2022-02-14T00:50:00.000Z"
+  },
+  {
+    "store": "Food Basics",
+    "amount": 74.32,
+    "time": "2022-02-13T14:34:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 55.24,
+    "time": "2022-02-13T18:34:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 87.62,
+    "time": "2022-02-14T14:26:00.000Z"
+  },
+  {
+    "store": "Best Buy",
+    "amount": 56.5,
+    "time": "2022-02-15T00:31:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 82.51,
+    "time": "2022-02-14T18:28:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 70.83,
+    "time": "2022-02-14T20:09:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 75.58,
+    "time": "2022-02-14T18:20:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 22.16,
+    "time": "2022-02-15T20:45:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 57.09,
+    "time": "2022-02-15T13:45:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 2.73,
+    "time": "2022-02-15T13:47:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 46.53,
+    "time": "2022-02-15T17:55:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 1.33,
+    "time": "2022-02-15T19:01:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 43.15,
+    "time": "2022-02-16T20:04:00.000Z"
+  },
+  {
+    "store": "Steam",
+    "amount": 13.38,
+    "time": "2022-02-17T00:30:00.000Z"
+  },
+  {
+    "store": "Best Buy",
+    "amount": 20.99,
+    "time": "2022-02-16T14:43:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 14.36,
+    "time": "2022-02-16T22:17:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 92.92,
+    "time": "2022-02-16T22:58:00.000Z"
+  },
+  {
+    "store": "Loblaws",
+    "amount": 93.3,
+    "time": "2022-02-17T12:21:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 82.45,
+    "time": "2022-02-17T12:15:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 61.37,
+    "time": "2022-02-17T20:17:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 38.86,
+    "time": "2022-02-17T20:03:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 99.44,
+    "time": "2022-02-18T00:09:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 32.04,
+    "time": "2022-02-18T18:16:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 29.02,
+    "time": "2022-02-18T13:14:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 8.8,
+    "time": "2022-02-19T03:50:00.000Z"
+  },
+  {
+    "store": "Dollarama",
+    "amount": 36.43,
+    "time": "2022-02-18T14:37:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 82.72,
+    "time": "2022-02-18T19:07:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 26.01,
+    "time": "2022-02-20T01:39:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 30.93,
+    "time": "2022-02-20T02:46:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 32.05,
+    "time": "2022-02-20T01:36:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 46.71,
+    "time": "2022-02-19T18:47:00.000Z"
+  },
+  {
+    "store": "Best Buy",
+    "amount": 90.6,
+    "time": "2022-02-19T13:01:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 45.93,
+    "time": "2022-02-20T16:27:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 79.19,
+    "time": "2022-02-20T14:46:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 87.79,
+    "time": "2022-02-20T16:32:00.000Z"
+  },
+  {
+    "store": "Shoppers",
+    "amount": 94.61,
+    "time": "2022-02-20T17:02:00.000Z"
+  },
+  {
+    "store": "Costco",
+    "amount": 14.63,
+    "time": "2022-02-21T02:52:00.000Z"
+  },
+  {
+    "store": "eBay",
+    "amount": 41.5,
+    "time": "2022-02-21T15:24:00.000Z"
+  },
+  {
+    "store": "Amazon",
+    "amount": 59.41,
+    "time": "2022-02-21T23:56:00.000Z"
+  },
+  {
+    "store": "McDonald's",
+    "amount": 15.41,
+    "time": "2022-02-22T01:03:00.000Z"
+  },
+  {
+    "store": "Best Buy",
+    "amount": 34.62,
+    "time": "2022-02-21T12:05:00.000Z"
+  },
+  {
+    "store": "Google Play",
+    "amount": 46.43,
+    "time": "2022-02-21T23:07:00.000Z"
+  }
+]
