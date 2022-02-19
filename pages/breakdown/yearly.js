@@ -96,7 +96,7 @@ export default function YearBreakdown() {
         </div>
         <br />
         <br />
-        <div className="bar-container flex flex-col p-6">
+        <div className="bar-container flex flex-col p-6 overlayable">
           <h1 className="title">Monthly Spending</h1>
           <h3 className="subtitle">
             At the end of 2021, you were $20,000.04 over-budget, or 25%
@@ -143,6 +143,14 @@ export default function YearBreakdown() {
               },
             }}
           />
+          <div className="overlayed w-content">
+            <p className="text-sm text-gray-400 font-medium text-right mb-2">
+              budget = $80,000
+            </p>
+            <p className="text-sm text-gray-400 font-medium text-right">
+              spending = $100,000.04
+            </p>
+          </div>
         </div>
         <div className="bar-container flex justify-center items-center p-6"></div>
       </div>
@@ -168,6 +176,17 @@ export default function YearBreakdown() {
         .bar-container {
           border: 1px solid #75c5ff66;
           border-radius: 0.75rem;
+        }
+
+        .overlayable {
+          position: relative;
+          display: inline-block;
+        }
+
+        .overlayed {
+          position: absolute;
+          top: 65%;
+          left: 70%;
         }
 
         * {
