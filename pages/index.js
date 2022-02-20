@@ -29,8 +29,8 @@ export default function Home({
   ];
   const pairList = [
     {
-      title: "money left in budget",
-      value: budgetLeft,
+      title: "remaining budget this month",
+      value: budgetLeft / 12,
     },
     {
       title: "recommended spending",

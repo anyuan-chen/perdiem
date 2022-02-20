@@ -56,11 +56,15 @@ export default function Goals() {
               ></input>
               <button
                 className="px-4 text-white rounded-lg"
+<<<<<<< HEAD
                 onClick={() => setMessage("")}
                 style={{
                   background: "rgba(46,119,205)",
                   opacity: `${opacity}`,
                 }}
+=======
+                style={{ background: "rgba(46,119,205)" }}
+>>>>>>> 53758e5 (Change yearly budget to monthly budget)
               >
                 Save
               </button>
