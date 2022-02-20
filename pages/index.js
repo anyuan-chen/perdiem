@@ -40,7 +40,7 @@ export default function Home({
     <div className="flex" style={{ marginLeft: "25vw" }}>
       <Navbar></Navbar>
       <div
-        className="px-24 py-16 h-screen grid grid-row-2 grid-col-2 gap-x-20"
+        className="px-20 py-16 h-screen grid grid-row-2 grid-col-2 gap-x-10"
         style={{ width: "75vw" }}
       >
         <div className="col-start-1 col-span-1 row-start-1 row-span-1 w-full h-full">
