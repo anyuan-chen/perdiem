@@ -3,9 +3,9 @@ import React from "react";
 import BankCard from "../components/shared/bankcard";
 import Navbar from "../components/shared/navbar";
 import Link from "next/link";
-import CompletionBar from "../components/breakdown/bar"
+import CompletionBar from "../components/breakdown/bar";
 import Goal from "../components/goals/goal";
-
+import { useState } from "react";
 const pairList = [
   {
     title: "total bank balance",
@@ -86,10 +86,35 @@ export default function Goals() {
                 <img src="/photos/plus.svg" alt="plus"></img>
               </button>
             </div>
-            <div className="pb-4 px-8 flex">
-              <Goal></Goal>
+            <div className="pb-4 px-8 flex flex-col scrollable overflow-auto" style={{height: "45vh"}}>
+              <Goal
+                color="green"
+                title="Save for a car"
+                motivation="You are on track to finish in 14 months, keep it up!"
+                value1="$10,339.04"
+                value2="of $13,984.23"
+                tip="Add extra money once a day according to algorithm"
+                tooltip="If you spent less than our recommended  (according to your overall budget): the difference will be added to this goal"
+              ></Goal>
+              <Goal
+                color="red"
+                title="Buy your mom a present"
+                motivation="You need 1 more month to finish this goal :("
+                value1="$20"
+                value2="of $60"
+                tip="Take away money according to algorithm"
+                tooltip="If you spent more than our recommended  (according to your overall budget): the difference will be removed from this goal"
+              ></Goal>
+              <Goal
+                color="yellow"
+                title="Bubble Tea fund"
+                motivation="You have not deposited anything in this fund in the past 2 months"
+                value1="$8"
+                value2="of $10"
+                tip="Add extra money once a day according to algorithm"
+                tooltip="If you spent more than our recommended  (according to your overall budget): the difference will be removed from this goal"
+              ></Goal>
             </div>
-            
           </div>
         </div>
       </div>

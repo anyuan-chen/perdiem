@@ -1,11 +1,35 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Tooltip from "../dashboard/tooltip";
-export default function Goal() {
+import Tooltip from "./tooltip";
+import { useState } from "react";
+import { motion } from "framer-motion";
+export default function Goal({
+  color,
+  title,
+  motivation,
+  value1,
+  value2,
+  tip,
+  tooltip,
+}) {
+  let arrow;
+  let textColor;
+  const [hover, setHover] = useState(false);
+  if (color === "green") {
+    arrow = "greenarrow";
+    textColor = "489C6A";
+  }
+  if (color === "red") {
+    arrow = "redarrow";
+    textColor = "FF4D00";
+  }
+  if (color === "yellow") {
+    arrow = "yellowarrow";
+    textColor = "FF9900";
+  }
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full pb-8">
       <hr color="#E0E0E0" size="1px" className="pb-4"></hr>
-
       <div className="flex">
         <h1
           style={{
@@ -15,10 +39,10 @@ export default function Goal() {
             alignSelf: "end",
           }}
         >
-          Save for A Car
+          {title}
         </h1>
         <img
-          src="/photos/greenarrow.svg"
+          src={`/photos/${arrow}.svg`}
           alt="writing"
           className="pr-4"
           style={{
@@ -28,24 +52,24 @@ export default function Goal() {
         ></img>
         <h4
           style={{
-            color: "#489C6A",
+            color: `#${textColor}`,
             alignSelf: "end",
             lineHeight: "33px",
             fontWeight: "lighter",
           }}
         >
-          You are on track to finish in 14 months, keep it up!
+         {motivation}
         </h4>
       </div>
 
       <div
-        className="w-full h-4"
+        className="w-full h-8 rounded-full"
         style={{ backgroundColor: "#E0E0E0", marginTop: "1rem" }}
       >
         <div
-          className="w-full h-4"
+          className="w-full h-8"
           style={{
-            backgroundColor: "#489C6A",
+            backgroundColor: `#${textColor}`,
             width: "56%",
           }}
         ></div>
@@ -59,7 +83,7 @@ export default function Goal() {
             color: "#474747",
           }}
         >
-          $10,339.04
+          {value1}
         </h1>
         <h1
           style={{
@@ -69,17 +93,24 @@ export default function Goal() {
             marginLeft: "auto",
           }}
         >
-          of $13,984.23{" "}
+          of {value2}{" "}
         </h1>
       </div>
       <div className="flex">
-        <button
+        <motion.button
           className="flex space-x-4 px-4 py-2 rounded-full mt-4"
           style={{ color: "#2E77CD", background: "#E2F0FF" }}
+          onMouseEnter={() => {
+            setHover(true);
+          }}
+          onMouseLeave={() => {
+            setHover(false);
+          }}
         >
-          <h1>Add extra money once a day according to algorithm</h1>
+          <h1>{tip}</h1>
           <img src="/photos/questionMark.svg" alt="question mark"></img>
-        </button>
+        </motion.button>
+        {hover && <Tooltip tooltip={tooltip}></Tooltip>}
       </div>
     </div>
   );
