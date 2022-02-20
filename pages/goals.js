@@ -16,7 +16,7 @@ const pairList = [
     title: "money spent today",
     value: 22003.98,
   },
-];
+];      
 export default function Goals() {
   const [message, setMessage] = useState("");
   const [opacity, setOpacity] = useState(0.5);
