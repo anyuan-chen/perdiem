@@ -35,9 +35,9 @@ export default function YearBreakdown() {
     "Remember that time you only spent $20 one day in February? I can't.";
 
   return (
-    <div className="flex container">
+    <div className="flex container cs-bg">
       <Navbar></Navbar>
-      <div className="flex-column p-20 w-full cs-bg">
+      <div className="flex-column p-20 w-auto" style={{ maxWidth: "1000px" }}>
         <h1 className="title">In 2021, you spent $100,000.04</h1>
         <h3 className="subtitle">
           You destroyed your budget of $80,000. Let&apos;s see how you managed
