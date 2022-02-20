@@ -1,5 +1,10 @@
 # Perdiem
 
+<a href=""><img src="https://img.shields.io/github/languages/code-size/anyuan-chen/perdiem" /></a>
+<a href=""><img src="https://img.shields.io/tokei/lines/github/anyuan-chen/perdiem" /></a>
+<a href=""><img src="https://img.shields.io/github/package-json/dependency-version/anyuan-chen/perdiem/react" /></a>
+<a href=""><img src="https://img.shields.io/github/license/anyuan-chen/perdiem" /></a>
+
 Budget tracker app focused on delivering a simple visualization-heavy experience to users newer to managing their own expenses and the financial space.
 
 ## Installation
