@@ -21,11 +21,11 @@ export default function Goals() {
   const [message, setMessage] = useState("");
   const [opacity, setOpacity] = useState(0.5);
   useEffect(() => {
-    if (message !== ""){
-        setOpacity(1);
+    if (message !== "") {
+      setOpacity(1);
     }
-  }, [message])
-  
+  }, [message]);
+
   return (
     <div>
       <Navbar></Navbar>
@@ -56,7 +56,11 @@ export default function Goals() {
               ></input>
               <button
                 className="px-4 text-white rounded-lg"
-                style={{ background: "rgba(46,119,205)", opacity: `${opacity}` }}
+                onClick={() => setMessage("")}
+                style={{
+                  background: "rgba(46,119,205)",
+                  opacity: `${opacity}`,
+                }}
               >
                 Save
               </button>

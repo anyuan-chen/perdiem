@@ -9,9 +9,7 @@ export default function BankCard({ pairList, type, ...props }) {
   });
 
   var bankImgSource = pairList.length >= 3 ? "bankcard-big" : "bankcard";
-  if (type === "goal") {
-    bankImgSource = "goalcard";
-  }
+
   const bankBorder = pairList.length >= 3 ? "#67BFFE" : "#8567fe";
   const headerSpacing = pairList.length >= 3 ? "2px" : "11px";
 
@@ -35,9 +33,9 @@ export default function BankCard({ pairList, type, ...props }) {
     <div className="container">
       <div className="body-text">
         {formattedPairList.map((pair, i) => (
-          <div key={i}>
+          <div key={i} className="">
             <h2>{pair.title}</h2>
-            <p className="budget-value">{pair.value}</p>
+            <p className="budget-value pb-4">{pair.value}</p>
           </div>
         ))}
         {props.children}
