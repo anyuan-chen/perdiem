@@ -18,6 +18,7 @@ const pairList = [
   },
 ];
 export default function Goals() {
+<<<<<<< HEAD
   const [message, setMessage] = useState("");
   const [opacity, setOpacity] = useState(0.5);
   useEffect(() => {
@@ -26,6 +27,25 @@ export default function Goals() {
     }
   }, [message]);
 
+=======
+  let textInput = React.createRef();
+  const pushMonthlyBudget = () => {
+    const textValue = textInput.current.value;
+    const annual = parseFloat(textValue) * 12;
+    const options = {
+      method: "POST",
+      body: JSON.stringify({ key: "budget", value: annual }),
+      headers: { "Content-Type": "application/json" },
+    };
+    fetch("/api/userinfo", options)
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  };
+<<<<<<< HEAD
+>>>>>>> 04503f9 (Make the buttons change colour when pressed)
+=======
+
+>>>>>>> 51b9cd4 (Allow changing budget)
   return (
     <div>
       <Navbar></Navbar>
@@ -50,17 +70,28 @@ export default function Goals() {
               </span>
               <input
                 type="text"
+                ref={textInput}
                 className="rounded-lg border-dividerGray"
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
               ></input>
               <button
+<<<<<<< HEAD
                 className="px-4 text-white rounded-lg"
+<<<<<<< HEAD
                 onClick={() => setMessage("")}
                 style={{
                   background: "rgba(46,119,205)",
                   opacity: `${opacity}`,
                 }}
+=======
+                style={{ background: "rgba(46,119,205)" }}
+>>>>>>> 53758e5 (Change yearly budget to monthly budget)
+=======
+                className="px-4 text-white rounded-lg active:brightness-50 transition-all"
+                style={{ background: "rgba(46,119,205)" }}
+                onClick={pushMonthlyBudget}
+>>>>>>> 04503f9 (Make the buttons change colour when pressed)
               >
                 Save
               </button>
@@ -90,7 +121,7 @@ export default function Goals() {
               </h1>
               <img src="/photos/writing.svg" alt="writing"></img>
               <button
-                className="flex items-center justify-center rounded"
+                className="flex items-center justify-center rounded active:brightness-50 transition-all"
                 style={{
                   background: "#2E77CD",
                   height: "auto",

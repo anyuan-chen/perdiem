@@ -14,7 +14,7 @@ export default function CompletionBar({ percentage, color }) {
 
         .color-bar {
           height: 100%;
-          width: ${percentage}%;
+          width: ${Math.round(percentage)}%;
           background: ${color};
         }
       `}</style>
