@@ -12,6 +12,7 @@ export default function BankCard({ pairList, type }) {
   if (type === "goal") {
     bankImgSource = "goalcard";
   }
+  const bankBorder = pairList.length >= 3 ? "#67BFFE" : "#8567fe";
   const headerSpacing = pairList.length >= 3 ? "2px" : "11px";
 
   // woo fragile
@@ -45,9 +46,9 @@ export default function BankCard({ pairList, type }) {
           .container {
             position: relative;
             display: inline-block;
-            background: center / contain no-repeat
-              url("/photos/bankcard-bg.svg");
-            border: 1px solid purple;
+            background: center / cover no-repeat
+              url("/photos/${bankImgSource}-bg.svg");
+            border: 1px solid ${bankBorder};
             border-radius: 1rem;
             padding: 2rem;
           }
