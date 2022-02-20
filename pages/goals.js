@@ -18,7 +18,6 @@ const pairList = [
   },
 ];
 export default function Goals() {
-<<<<<<< HEAD
   const [message, setMessage] = useState("");
   const [opacity, setOpacity] = useState(0.5);
   useEffect(() => {
@@ -27,7 +26,6 @@ export default function Goals() {
     }
   }, [message]);
 
-=======
   let textInput = React.createRef();
   const pushMonthlyBudget = () => {
     const textValue = textInput.current.value;
@@ -41,11 +39,7 @@ export default function Goals() {
       .then((res) => res.json())
       .then((res) => console.log(res));
   };
-<<<<<<< HEAD
->>>>>>> 04503f9 (Make the buttons change colour when pressed)
-=======
 
->>>>>>> 51b9cd4 (Allow changing budget)
   return (
     <div>
       <Navbar></Navbar>
@@ -76,22 +70,15 @@ export default function Goals() {
                 onChange={(event) => setMessage(event.target.value)}
               ></input>
               <button
-<<<<<<< HEAD
-                className="px-4 text-white rounded-lg"
-<<<<<<< HEAD
-                onClick={() => setMessage("")}
+                className="px-4 text-white rounded-lg active:brightness-50 transition-all"
+                onClick={() => {
+                  setMessage("");
+                  pushMonthlyBudget();
+                }}
                 style={{
                   background: "rgba(46,119,205)",
                   opacity: `${opacity}`,
                 }}
-=======
-                style={{ background: "rgba(46,119,205)" }}
->>>>>>> 53758e5 (Change yearly budget to monthly budget)
-=======
-                className="px-4 text-white rounded-lg active:brightness-50 transition-all"
-                style={{ background: "rgba(46,119,205)" }}
-                onClick={pushMonthlyBudget}
->>>>>>> 04503f9 (Make the buttons change colour when pressed)
               >
                 Save
               </button>
@@ -107,7 +94,10 @@ export default function Goals() {
           ></BankCard>
         </div>
         <div className="">
-          <div className="mt-16  rounded-2xl " style={{border : "1px solid #8567FE"}}>
+          <div
+            className="mt-16  rounded-2xl "
+            style={{ border: "1px solid #8567FE" }}
+          >
             <div className="flex py-8 px-8">
               <h1
                 style={{
