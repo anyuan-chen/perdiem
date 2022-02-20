@@ -1,9 +1,11 @@
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import spendingData from "../../data/spendingData.json";
 import Navbar from "../../components/shared/navbar";
 import CompletionBar from "../../components/shared/simplebar";
 import BankCard from "../../components/shared/bankcard";
+import dayjs from "dayjs";
 
 const allDays = [
   ...new Set(spendingData.map((i) => i.time.substring(0, i.time.indexOf("T")))),
@@ -15,7 +17,15 @@ for (const d of allDays) {
   dayStructure[d].push(...spendingData.filter((i) => i.time.startsWith(d)));
 }
 
-export default function Day({ day }) {
+export default function Day({ day, items }) {
+  const today = dayjs(day);
+  const yesterday = today.subtract(1, "day");
+  const tomorrow = today.add(1, "day");
+  console.log(day);
+
+  const getDateUrlSlug = (date) => date.format("YYYY-MM-DD");
+  const getFullLocaleDate = (date) => dayjs(date).format("MMMM D, YYYY");
+
   const bankColor =
     Math.abs(5) <= 5 ? "yellow" : changePercentage < 0 ? "green" : "red";
   return (
@@ -23,19 +33,25 @@ export default function Day({ day }) {
       <Navbar />
       <div className="container grid grid-cols-2 grid-rows-6 w-full p-8 gap-8">
         <header className="flex items-center justify-center col-span-2">
-          <motion.button
-            className="rounded-full w-12 h-12 flex items-center justify-center"
-            style={{ backgroundColor: "#E9EFFD" }}
-          >
-            <img src="/icons/leftArrow.svg" alt="left arrow"></img>
-          </motion.button>
-          <h1 className="text-3xl font-bold px-8">February 2022</h1>
-          <motion.button
-            className="rounded-full w-12 h-12 flex items-center justify-center"
-            style={{ backgroundColor: "#F5F3FF" }}
-          >
-            <img src="/icons/rightArrow.svg" alt="right arrow"></img>
-          </motion.button>
+          <Link href={`/day/${getDateUrlSlug(yesterday)}`}>
+            <motion.button
+              className="rounded-full w-12 h-12 flex items-center justify-center"
+              style={{ backgroundColor: "#E9EFFD" }}
+            >
+              <img src="/icons/leftArrow.svg" alt="left arrow"></img>
+            </motion.button>
+          </Link>
+          <h1 className="text-3xl font-bold px-8">
+            {getFullLocaleDate(today)}
+          </h1>
+          <Link href={`/day/${getDateUrlSlug(tomorrow)}`}>
+            <motion.button
+              className="rounded-full w-12 h-12 flex items-center justify-center"
+              style={{ backgroundColor: "#F5F3FF" }}
+            >
+              <img src="/icons/rightArrow.svg" alt="right arrow"></img>
+            </motion.button>
+          </Link>
         </header>
         <div className="col-span-2 bg-white p-4">
           <div className="grid bg-white border-orange-300 rounded-lg border p-6 px-10 grid-rows-2 grid-cols-2">
@@ -134,7 +150,8 @@ export default function Day({ day }) {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      day: dayStructure[params.day],
+      day: params.day,
+      items: dayStructure[params.day],
     },
   };
 }
