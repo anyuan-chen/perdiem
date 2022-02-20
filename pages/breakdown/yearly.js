@@ -3,7 +3,7 @@ import Navbar from "../../components/shared/navbar";
 import ResultCard from "../../components/breakdown/resultcard";
 import InfoboxSmall from "../../components/breakdown/infobox-small";
 import InfoboxBig from "../../components/breakdown/infobox-big";
-import CompletionBar from "../../components/breakdown/bar";
+import BreakdownBar from "../../components/breakdown/bar";
 import { Line } from "react-chartjs-2";
 import toCsv from "../../components/utils/json2csv";
 import spendingData from "../../data/spendingData.json";
@@ -72,7 +72,7 @@ export default function YearBreakdown() {
         </div>
         <h1 className="title mt-8">Your biggest offenders were...</h1>
         <div className="bar-container flex flex-col p-6 bg-white">
-          <CompletionBar
+          <BreakdownBar
             percentage={69}
             description="70% of your groceries were spent at Costco"
             cost={342.2}
