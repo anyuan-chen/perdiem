@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/shared/navbar";
 import ResultCard from "../../components/breakdown/resultcard";
 import InfoboxSmall from "../../components/breakdown/infobox-small";
@@ -7,6 +7,7 @@ import BreakdownBar from "../../components/breakdown/bar";
 import { Line } from "react-chartjs-2";
 import toCsv from "../../components/utils/json2csv";
 import spendingData from "../../data/spendingData.json";
+import dayjs from "dayjs";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -28,20 +29,42 @@ ChartJS.register(
   Legend
 );
 
-export default function YearBreakdown() {
+export default function YearBreakdown({ budget, spent }) {
   const monthlyDescription = "August was your best month, with $6,000.20 spent";
   const weeklyDescription = "Your best week was February 1st to February 8th.";
   const dailyDescription =
     "Remember that time you only spent $20 one day in February? I can't.";
 
+  const lastYear = dayjs().subtract(1, "year").format("YYYY");
+  const EXAGGERATORY_WORDS = [
+    { multiplier: 1.75, message: "destroyed" },
+    { multiplier: 1.25, message: "were well over" },
+    { multiplier: 0.75, message: "just about met" },
+    { multiplier: 0, message: "were well under" },
+  ];
+
+  let chosenExaggeratoryWord = "you should not see this";
+  for (const pair of EXAGGERATORY_WORDS) {
+    if (pair.multiplier * budget <= spent) {
+      chosenExaggeratoryWord = pair.message;
+      break;
+    }
+  }
+
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
   return (
     <div className="flex container cs-bg">
       <Navbar></Navbar>
       <div className="flex-column p-20 w-auto" style={{ maxWidth: "1000px" }}>
-        <h1 className="title">In 2021, you spent $100,000.04</h1>
+        <h1 className="title">
+          In {lastYear}, you spent {formatter.format(spent)}
+        </h1>
         <h3 className="subtitle">
-          You destroyed your budget of $80,000. Let&apos;s see how you managed
-          to do it.
+          You {chosenExaggeratoryWord} your budget of {formatter.format(budget)}
+          . Let&apos;s see how you managed to do it.
         </h3>
         <br />
         <div className="gap-10 grid grid-flow-row-dense grid-cols-2 grid-rows-5">
@@ -251,3 +274,26 @@ export default function YearBreakdown() {
     </div>
   );
 }
+
+export const getServerSideProps = async (context) => {
+  const httpProtocol = context.req.headers.host.includes("localhost")
+    ? "http"
+    : "https";
+  const { username, budget, balance } = await (
+    await fetch(`${httpProtocol}://${context.req.headers.host}/api/userinfo`)
+  ).json();
+
+  const history = await (
+    await fetch(`${httpProtocol}://${context.req.headers.host}/api/history`)
+  ).json();
+
+  return {
+    props: {
+      budget,
+      spent: history
+        .filter((i) => i.time.startsWith(lastYear))
+        .map((i) => i.amount)
+        .reduce((a, b) => a + b, 0),
+    },
+  };
+};
