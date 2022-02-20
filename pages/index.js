@@ -4,12 +4,11 @@ import Image from "next/image";
 import Calendar from "../components/dashboard/calendar";
 import BankCard from "../components/shared/bankcard";
 import Navbar from "../components/shared/navbar";
+import FakeStore from "../components/utils/fakeStore";
 
 export default function Home({
   dayInfo,
-  bankBalance,
   moneySpentToday,
-  budgetLeft,
   recommendedSpending,
 }) {
   const bigPairList = [
@@ -125,9 +124,7 @@ export const getServerSideProps = async (context) => {
   return {
     props: {
       dayInfo: dayInfo,
-      bankBalance: 0,
       moneySpentToday: moneySpentToday,
-      budgetLeft: 0,
       recommendedSpending: recommendedSpending,
     },
   };
