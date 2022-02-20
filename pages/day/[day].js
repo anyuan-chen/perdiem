@@ -21,7 +21,6 @@ export default function Day({ day, items }) {
   const today = dayjs(day);
   const yesterday = today.subtract(1, "day");
   const tomorrow = today.add(1, "day");
-  console.log(day);
 
   const getDateUrlSlug = (date) => date.format("YYYY-MM-DD");
   const getFullLocaleDate = (date) => dayjs(date).format("MMMM D, YYYY");
