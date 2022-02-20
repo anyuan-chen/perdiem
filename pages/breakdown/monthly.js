@@ -64,9 +64,9 @@ export default function MonthBreakdown({
   const lastMonth = dayjs().subtract(1, "month").format("YYYY");
   const EXAGGERATORY_WORDS = [
     { multiplier: 1.75, message: "destroyed" },
-    { multiplier: 1.25, message: "were well over" },
+    { multiplier: 1.25, message: "were over" },
     { multiplier: 0.75, message: "just about met" },
-    { multiplier: 0, message: "were well under" },
+    { multiplier: 0, message: "were under" },
   ];
 
   let chosenExaggeratoryWord = "you should not see this";
@@ -79,7 +79,7 @@ export default function MonthBreakdown({
 
   let categoryTotals = {};
   for (const a of categories) {
-    categoryTotals[a.category] = a.totalMoney;
+    categoryTotals[a.category] = a.totalMoney;  
   }
 
   const averages = {
