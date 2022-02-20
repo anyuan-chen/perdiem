@@ -9,7 +9,7 @@ export default function BankCard({ pairList, type }) {
   });
 
   var bankImgSource = pairList.length >= 3 ? "bankcard-big" : "bankcard";
-  if (type === "goal"){
+  if (type === "goal") {
     bankImgSource = "goalcard";
   }
   const headerSpacing = pairList.length >= 3 ? "2px" : "11px";
@@ -32,7 +32,6 @@ export default function BankCard({ pairList, type }) {
 
   return (
     <div className="container">
-      <img src={`/photos/${bankImgSource}-bg.svg`} width="auto" alt="bg-card" />
       <div className="body-text">
         {formattedPairList.map((pair, i) => (
           <div key={i}>
@@ -46,6 +45,11 @@ export default function BankCard({ pairList, type }) {
           .container {
             position: relative;
             display: inline-block;
+            background: center / contain no-repeat
+              url("/photos/bankcard-bg.svg");
+            border: 1px solid purple;
+            border-radius: 1rem;
+            padding: 2rem;
           }
 
           h2 {
@@ -65,22 +69,6 @@ export default function BankCard({ pairList, type }) {
             line-height: 44px;
             letter-spacing: 0.01em;
             color: #474747;
-          }
-
-          .body-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 100%;
-            width: 100%;
-            padding-left: 40px;
-            padding-right: 40px;
-            padding-top: 40px;
-            padding-bottom: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
           }
 
           * {
