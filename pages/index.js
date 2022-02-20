@@ -4,6 +4,7 @@ import Image from "next/image";
 import Calendar from "../components/dashboard/calendar";
 import BankCard from "../components/shared/bankcard";
 import Navbar from "../components/shared/navbar";
+import dayjs from "dayjs";
 
 export default function Home({
   dayInfo,
@@ -118,16 +119,24 @@ export const getServerSideProps = async (context) => {
     )
   ).json();
 
+  const { username, budget, balance } = await (
+    await fetch(`${httpProtocol}://${context.req.headers.host}/api/userinfo`)
+  ).json();
+
   const recommendedSpending = res.amount;
   const moneySpentToday =
     historyRes.map((e) => e.amount).reduce((a, b) => a + b, 0) || 0;
+  const moneySpentThusFar = historyRes
+    .filter((a) => a.time.startsWith("" + dayjs().year()))
+    .map((a) => a.amount)
+    .reduce((a, b) => a + b);
 
   return {
     props: {
       dayInfo: dayInfo,
-      bankBalance: 0,
+      bankBalance: balance,
       moneySpentToday: moneySpentToday,
-      budgetLeft: 0,
+      budgetLeft: moneySpentThusFar - budget,
       recommendedSpending: recommendedSpending,
     },
   };

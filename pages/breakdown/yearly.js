@@ -51,8 +51,8 @@ export default function YearBreakdown({
     lowestStats.month.best
   )} spent.`;
   const weeklyDescription = `Your best week was from ${dayjs(
-    lowestStats.week
-  ).format("MMMM D")} to ${dayjs(lowestStats.week)
+    lowestStats.week.week
+  ).format("MMMM D")} to ${dayjs(lowestStats.week.week)
     .add(7, "days")
     .format("MMMM D")}, when you spent only ${formatter.format(
     lowestStats.week.best
