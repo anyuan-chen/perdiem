@@ -35,8 +35,8 @@ export default function Goals() {
       >
         <div className="flex space-x-16">
           <div
-            className="flex flex-col px-12 py-12 space-y-8 w-full border "
-            style={{ height: "257px", borderRadius: "4%" }}
+            className="flex flex-col px-12 py-12 space-y-8 w-full rounded-2xl"
+            style={{ height: "257px", border: "1px blue solid" }}
           >
             <h1
               className=" text-lg UPPERCASE text-textGray"
@@ -76,7 +76,7 @@ export default function Goals() {
           ></BankCard>
         </div>
         <div className="">
-          <div className="mt-16 mr-24 border rounded-2xl ">
+          <div className="mt-16  rounded-2xl " style={{border : "1px solid #8567FE"}}>
             <div className="flex py-8 px-8">
               <h1
                 style={{
@@ -110,7 +110,7 @@ export default function Goals() {
                 title="Save for a car"
                 motivation="You are on track to finish in 14 months, keep it up!"
                 value1="$10,339.04"
-                value2="of $13,984.23"
+                value2="$13,984.23"
                 tip="Add extra money once a day according to algorithm"
                 tooltip="If you spent less than our recommended  (according to your overall budget): the difference will be added to this goal"
               ></Goal>
@@ -119,7 +119,7 @@ export default function Goals() {
                 title="Buy your mom a present"
                 motivation="You need 1 more month to finish this goal :("
                 value1="$20"
-                value2="of $60"
+                value2="$60"
                 tip="Take away money according to algorithm"
                 tooltip="If you spent more than our recommended  (according to your overall budget): the difference will be removed from this goal"
               ></Goal>
@@ -128,7 +128,7 @@ export default function Goals() {
                 title="Bubble Tea fund"
                 motivation="You have not deposited anything in this fund in the past 2 months"
                 value1="$8"
-                value2="of $10"
+                value2="$10"
                 tip="Add extra money once a day according to algorithm"
                 tooltip="If you spent more than our recommended  (according to your overall budget): the difference will be removed from this goal"
               ></Goal>

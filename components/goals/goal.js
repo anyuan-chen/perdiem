@@ -14,6 +14,10 @@ export default function Goal({
 }) {
   let arrow;
   let textColor;
+  let percentage = Math.floor(
+    (parseInt(value1.substr(1)) / parseInt(value2.substr(1))) * 100
+  );
+  console.log(percentage);
   const [hover, setHover] = useState(false);
   if (color === "green") {
     arrow = "greenarrow";
@@ -29,7 +33,7 @@ export default function Goal({
   }
   return (
     <div className="flex flex-col w-full pb-8">
-      <hr color="#E0E0E0" size="1px" className="pb-4"></hr>
+      <hr color="#E0E0E0" size="1px" className="mb-4"></hr>
       <div className="flex">
         <h1
           style={{
@@ -55,10 +59,9 @@ export default function Goal({
             color: `#${textColor}`,
             alignSelf: "end",
             lineHeight: "33px",
-            fontWeight: "lighter",
           }}
         >
-         {motivation}
+          {motivation}
         </h4>
       </div>
 
@@ -67,10 +70,10 @@ export default function Goal({
         style={{ backgroundColor: "#E0E0E0", marginTop: "1rem" }}
       >
         <div
-          className="w-full h-8"
+          className="w-full h-8 rounded-full"
           style={{
             backgroundColor: `#${textColor}`,
-            width: "56%",
+            width: `${percentage}%`,
           }}
         ></div>
       </div>
@@ -98,7 +101,7 @@ export default function Goal({
       </div>
       <div className="flex">
         <motion.button
-          className="flex space-x-4 px-4 py-2 rounded-full mt-4"
+          className="flex space-x-4 px-4 py-2 rounded-full mt-4 items-center"
           style={{ color: "#2E77CD", background: "#E2F0FF" }}
           onMouseEnter={() => {
             setHover(true);
