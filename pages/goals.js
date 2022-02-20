@@ -30,19 +30,22 @@ export default function Goals() {
 =======
   let textInput = React.createRef();
   const pushMonthlyBudget = () => {
-    console.log("wtf");
     const textValue = textInput.current.value;
     const annual = parseFloat(textValue) * 12;
     const options = {
       method: "POST",
-      body: JSON.stringify({ budget: annual }),
+      body: JSON.stringify({ key: "budget", value: annual }),
       headers: { "Content-Type": "application/json" },
     };
     fetch("/api/userinfo", options)
       .then((res) => res.json())
       .then((res) => console.log(res));
   };
+<<<<<<< HEAD
 >>>>>>> 04503f9 (Make the buttons change colour when pressed)
+=======
+
+>>>>>>> 51b9cd4 (Allow changing budget)
   return (
     <div>
       <Navbar></Navbar>
