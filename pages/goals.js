@@ -6,6 +6,7 @@ import Link from "next/link";
 import CompletionBar from "../components/breakdown/bar";
 import Goal from "../components/goals/goal";
 import { useState } from "react";
+import { useEffect } from "react";
 const pairList = [
   {
     title: "total bank balance",
@@ -17,6 +18,14 @@ const pairList = [
   },
 ];
 export default function Goals() {
+  const [message, setMessage] = useState("");
+  const [opacity, setOpacity] = useState(0.5);
+  useEffect(() => {
+    if (message !== ""){
+        setOpacity(1);
+    }
+  }, [message])
+  
   return (
     <div>
       <Navbar></Navbar>
@@ -42,10 +51,12 @@ export default function Goals() {
               <input
                 type="text"
                 className="rounded-lg border-dividerGray"
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
               ></input>
               <button
                 className="px-4 text-white rounded-lg"
-                style={{ background: "rgba(46,119,205,0.5)" }}
+                style={{ background: "rgba(46,119,205)", opacity: `${opacity}` }}
               >
                 Save
               </button>
@@ -86,7 +97,10 @@ export default function Goals() {
                 <img src="/photos/plus.svg" alt="plus"></img>
               </button>
             </div>
-            <div className="pb-4 px-8 flex flex-col scrollable overflow-auto" style={{height: "45vh"}}>
+            <div
+              className="pb-4 px-8 flex flex-col scrollable overflow-auto"
+              style={{ height: "45vh" }}
+            >
               <Goal
                 color="green"
                 title="Save for a car"
