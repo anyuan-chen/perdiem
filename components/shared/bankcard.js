@@ -9,7 +9,6 @@ export default function BankCard({ pairList, type, ...props }) {
   });
 
   var bankImgSource = pairList.length >= 3 ? "bankcard-big" : "bankcard";
-
   const bankBorder = pairList.length >= 3 ? "#67BFFE" : "#8567fe";
   const headerSpacing = pairList.length >= 3 ? "2px" : "11px";
 
