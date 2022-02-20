@@ -121,7 +121,7 @@ export const getServerSideProps = async (context) => {
   const recommendedSpending = res.amount;
   const moneySpentToday =
     historyRes.map((e) => e.amount).reduce((a, b) => a + b, 0) || 0;
-  console.log(recommendedSpending, moneySpentToday);
+
   return {
     props: {
       dayInfo: dayInfo,

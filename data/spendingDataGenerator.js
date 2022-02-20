@@ -2,7 +2,7 @@
 // run w/ node
 const fs = require("fs");
 
-const RESULTS_PER_DAY = 5;
+const RESULTS_PER_DAY = 3;
 const STORES = [
   { name: "Loblaws", category: "Groceries" },
   { name: "Costco", category: "Groceries" },
@@ -24,7 +24,7 @@ const STORES = [
 ];
 const PRICE_RANGE = { start: 0.01, end: 100.0 };
 const DATE_RANGE = {
-  start: new Date("2022-02-01"),
+  start: new Date("2019-02-01"),
   end: new Date("2022-02-22"),
 };
 
