@@ -70,6 +70,7 @@ export default function Goals() {
                 onChange={(event) => setMessage(event.target.value)}
               ></input>
               <button
+                className="px-4 text-white rounded-lg active:brightness-50 transition-all"
                 onClick={() => {
                   setMessage("");
                   pushMonthlyBudget();
@@ -78,7 +79,6 @@ export default function Goals() {
                   background: "rgba(46,119,205)",
                   opacity: `${opacity}`,
                 }}
-                className="px-4 text-white rounded-lg active:brightness-50 transition-all"
               >
                 Save
               </button>
