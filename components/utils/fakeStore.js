@@ -4,15 +4,14 @@
 
 const FakeStore = {
   /**
-   * @returns {number}
+   * @returns {number=}
    */
   get budget() {
-    // number
     return localStorage.budget || 0;
   },
 
   set budget(val) {
-    localStorage.budget = this.budget;
+    localStorage.budget = val;
   },
 };
 
