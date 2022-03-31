@@ -8,7 +8,7 @@
 Budget tracker app focused on delivering a simple visualization-heavy experience to users newer to managing their own expenses and the financial space.
 
 ## Installation
-
+   
 First, clone the respository. 
 ```bash
 git clone https://github.com/anyuan-chen/perdiem.git
